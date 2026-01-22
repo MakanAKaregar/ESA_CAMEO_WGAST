@@ -6,3 +6,7 @@
 	path = RPR
 	url = https://github.com/MakanAKaregar/RPR.git
 	branch = v2.0.0
+[submodule "RPR_setup"]
+	path = RPR_setup
+	url = https://github.com/MakanAKaregar/RPR.git
+	branch = v2.0.0
