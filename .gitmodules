@@ -1,0 +1,8 @@
+[submodule "rpr"]
+	path = rpr
+	url = https://github.com/MakanAKaregar/RPR.git
+	branch = v2.0.0
+[submodule "RPR"]
+	path = RPR
+	url = https://github.com/MakanAKaregar/RPR.git
+	branch = v2.0.0
