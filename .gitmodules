@@ -2,3 +2,6 @@
 	path = RPR_setup
 	url = https://github.com/MakanAKaregar/RPR.git
 	branch = v2.0.0
+[submodule "Altimetry_FFSAR"]
+	path = Altimetry_FFSAR
+	url = https://github.com/chenjm-1996/JMART_Processer
