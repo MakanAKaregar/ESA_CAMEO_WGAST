@@ -1,9 +1,15 @@
+<p align="center">
+  <img src="EOAFRICA-logo-.png" width="200">
+</p>
+
 # CAMEO-WAGST
 
 **Cameroon Advanced Measurements for Enhanced Observations of Water Levels using Affordable GNSS-IR and Sentinel-3 & Sentinel-6 Technology**
 
 🔗 Project page (EO AFRICA R&D Facility):  
 https://www.eoafrica-rd.org/research/research-projects-2024-2026/#proposal_8
+
+Poject PIs: [Makan Karegar (University of Bonn)](https://www.igg.uni-bonn.de/apmg/de/team/staff/karegar), Loudi Yap (NIC)
 
 ---
 
