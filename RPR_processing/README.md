@@ -36,7 +36,7 @@ This RPR is operating in the Wouri estuary.
 
 - Height: 41.723 m
 
-[Google Map Link](https://goo.gl/maps/cN4zthXsSBDKneST8)
+[Google Map Link](https://maps.app.goo.gl/Hg3inK8Rb4ZkBJBS6)
 
 
 ### Data Summary
