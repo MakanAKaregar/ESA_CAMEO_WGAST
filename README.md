@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../assets/EOAFRICA-logo-.png" width="200">
+  <img src="/assets/EOAFRICA-logo-.png" width="200">
 </p>
 
 # CAMEO-WAGST
