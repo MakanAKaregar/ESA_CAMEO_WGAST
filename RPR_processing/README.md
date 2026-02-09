@@ -46,7 +46,7 @@ Station cam4 is located in Wouri estuary, Cameroon. It is operated by the Univer
 The RPR antenna is mounted about 5 m abover the water surface. SNR data on the L1 frequency every 1 second are collected for GPS, Glonass and Galileo satellites.
 
 ### 1. Pick up RPR data
-RPR data for period 2020-2022 are publically available from a [zenodo archive](https://doi.org/10.5281/zenodo.6828597). The data record is extended until June 2023 under a [new data veraion](https://zenodo.org/record/8077379).
+RPR data for period 01.06.2025 - ??.??.2026 are publically available from a [zenodo archive](). The data record is updated daily under [the University of Bonn's cloud]().
 
 Download all data (~ 1.7 GB, or 3.3 GB for the extended record):
 
@@ -58,9 +58,9 @@ https://github.com/MakanAKaregar/RPRatWesel
 
 Create nmea and station directory:
 
-<code>mkdir -p $REFL_CODE/nmea/WESL</code>
+<code>mkdir -p $REFL_CODE/nmea/cam4</code>
 
-and then store RPR NMEA files in <code>$REFL_CODE/nmea/WESL/yyyy/</code> where <code>yyyy</code> is the year number.
+and then store RPR NMEA files in <code>$REFL_CODE/nmea/cam4/yyyy/</code> where <code>yyyy</code> is the year number.
 
 [$REFL_CODE](https://github.com/kristinemlarson/gnssrefl/blob/master/docs/pages/README_install.md) is an environmental variable to be used by gnssrefl.
 
@@ -68,16 +68,16 @@ and then store RPR NMEA files in <code>$REFL_CODE/nmea/WESL/yyyy/</code> where <
 
 Use either gnssrefl's [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
 
-<code>refl_zones WESL -lat 51.646144 -lon 6.606817 -el_height 73.057 -RH 13 -azim1 250 -azim2 330 -el_list 5 10 15 20 </code>
+<code>refl_zones_all.py cam4 -lat 4.03296304 -lon 9.66628988 -height 41.723 -RH 5 -system all -fr 1 -azlist 180 360 -el_list 2 10</code>
 
 or try the [reflection zone webapp](https://gnss-reflections.org/rzones) with input parameters as:
 
-- Lat. 51.646144
-- Lon. 6.606817
-- EllipseHt. 73.057
-- Set Reflector Ht. Value 13
-- Elevation Angles 5,10,15,20,25
-- Azimuth Angles Start 250 End 330
+- Lat. 4.03296304
+- Lon. 9.66628988
+- EllipseHt. 41.723
+- Set Reflector Ht. Value 5
+- Elevation Angles 2,10
+- Azimuth Angles Start 180 End 360
 
 Here is a KML map generated from [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
 
@@ -85,13 +85,13 @@ Here is a KML map generated from [<code>refl_zone</code>](https://gnssrefl.readt
 
 ### 3. Translate NMEA format to SNR-ready format
 
-Now we should translate NMEA data to gnssrefl internal format ([SNR-ready files](https://gnssrefl.readthedocs.io/en/latest/pages/file_structure.html#the-snr-data-format)) using gnssrefl's [<code>nmea2snr</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.nmea2snr_cl.html) command. Here is an example for a single-day translation (doy 231 of 2021 or Aug. 19, 2021).
+Now we should translate NMEA data to gnssrefl internal format ([SNR-ready files](https://gnssrefl.readthedocs.io/en/latest/pages/file_structure.html#the-snr-data-format)) using gnssrefl's [<code>nmea2snr</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.nmea2snr_cl.html) command. Here is an example for a single-day translation (doy 1 of 2026).
 
-<code>nmea2snr WESL 2021 231 -lat 51.646144 -lon 6.606817 -height 73.057 </code>
+<code>nmea2snr cam4 2026 1 -lat 4.03296304 -lon 9.66628988 -height 41.723 -gzip True -snr 88 </code>
 
-to translate all data (from doy 114 of 2020 to doy 4 of 2022):
+to translate all data (from doy * of 2025 to doy * of 2026):
 
-<code>nmea2snr WESL 2020 114 -doy_end 4 -year_end 2022 -lat 51.646144 -lon 6.606817 -height 73.057 -risky True </code>
+<code>nmea2snr cam4 2025 * -year:end 2026 -doy_end 366 -lat 4.03296304 -lon 9.66628988 -height 41.723 -gzip True -snr 88</code>
 
 The SNR files are stored in <code>$REFL_CODE/yyyy/snr/WESL/</code>
 
@@ -99,7 +99,7 @@ The SNR files are stored in <code>$REFL_CODE/yyyy/snr/WESL/</code>
 
 With gnssrefl's[<code>quickLook</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) you can visually examin various azimuth mask settings and quality control parameters. 
 
-<code>quickLook WESL 2021 233 -h1 6 -h2 16 </code>
+<code>quickLook cam4 2026 1 -h1 1 -h2 8</code>
 
 [quickLook](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) makes two plots:
 
@@ -135,15 +135,15 @@ Once an appropriate input parameters were set, reflector heights can be estimate
 
 Here, we process a single day, doy 233 of 2021, setting plt option:  
 
-<code>gnssir WESL 2021 233 -plt T</code>
+<code>gnssir cam4 2026 1 -plt T</code>
 
 <img src="../_static/WESL_gnssir_plot.png" width="800" >
 
-The daily analysis output files are stored in <code>$REFL_CODE/yyyy/results/wesl</code>
+The daily analysis output files are stored in <code>$REFL_CODE/yyyy/results/cam4</code>
   
 ### 6. Processing and post-processing time series of reflector heights
 
-We now process 3 months of data from doy 93 to doy 171 of 2023.
+We now process 3 months of data from doy ** to doy ** of 2025.
 
 I maintain the daily archive of this RPR data at [the University of Bonn’s cloud](https://uni-bonn.sciebo.de/s/7CH1ctSPfQeLQbK):
 
@@ -182,45 +182,5 @@ reflector height (for each day) by more than 30 cm. The value for <code>ReqTrack
 All and daily mean of reflector heights are printed to <code>wesl_allRH.txt</code> and 
 <code>wesl_dailyRH.txt</code> text files in <code>$REFL_CODE/Files/wesl/</code>, respectively.
 
-### 7. Comparison with river gauge and accuracy assessment
-
-There is a river gauge collocated with the RPR at this site. Unfortunately, only the last 30 days of data can be downloaded from [WSV database](https://www.pegelonline.wsv.de/webservices/files/Wasserstand+Rohdaten/RHEIN/f33c3cc9-dc4b-4b77-baa9-5a5f10704398). If you need historical data please email me at: karegar@uni-bonn.de
-
-I processed all available [data from 2020 to 2022](https://zenodo.org/record/6828597) adopting the analyzing strategy we went through together. I interpolate the river gauge 15-min measurements to the times of the RPR water level estimates. The differences between two sub-daily water level and daily water level are shown in plots (a) and (b), respectively.
-
-<p align=center>
-<img src="../_static/wrcr26337-fig-0006-m.jpg" width="800">
-</p>
-
-The quality of RPR sub-daily water level data is significantly improved by forming daily mean as daily averaging filters out random sources of error. The RMS of differences between two water level data reduces from 7.6 cm (sub-daily) to 6 cm (daily).
-
-The Rhine experienced winter flooding period in mid-February followed by heavy rainfall and then exceptional flood event in summer 2021 (9–16 July). The heavy rainfall in July 2021 led to severe flooding in Western Europe including the Rhine river. 
-
-Water level fluctuations during annual flooding can be substantial and reach levels of 8 m, which causes overbank flooding. This is a site photo I took in March 2020 during an annual flood. 
-
-<p align=center>
-<img src="../_static/WESL_sitePhoto.jpg" width="800">
-</p>
-
-The vertical red dash line in plots (a) and (b) is Aug. 20, 2023 (doy 232) of RPR antenna orientation change from upright to sideways.
-
-### 8. Impact of antenna set-up orientation
-
-Geodetic antennas are always set in zenith direction but the flexibility of low-cost sensor is 
-the ability to customize the antenna orientation so you can rotated the antenna towards the 
-water body to get strong reflection. I tested the impact of antenna orientation by 
-tilting the antenna 90° from the vertical direction toward the river. The plot below shows that 
-the interference patterns in SNR from the sideways antenna are more distinct, with less noise and 
-larger oscillation amplitudes than data from the zenith-pointing antenna. The increased amplitude is related to 
-the gain pattern that is now applied by the antenna toward the surface of river and the reduced 
-noise is from the mitigation of cross channel interference when fewer satellites are tracked.
-
-<p align=center>
-<img src="../_static/wrcr26337-fig-0007-m.jpg" width="800" >
-</p>
-
-The RMS of sub-daily residuals reduces from 7.6 to 3 cm for the time spans before and after the antenna orientation change, respectively. For daily residuals, the RMS decreases from 6 to 1.5 cm
-
-### So when set your RPR antenna, tilt it always toward the river.
 
 Prepared by [Makan Karegar](https://github.com/MakanAKaregar). Last updated June 30, 2023.
