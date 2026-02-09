@@ -87,11 +87,11 @@ Here is a KML map generated from [<code>refl_zone</code>](https://gnssrefl.readt
 
 Now we should translate NMEA data to gnssrefl internal format ([SNR-ready files](https://gnssrefl.readthedocs.io/en/latest/pages/file_structure.html#the-snr-data-format)) using gnssrefl's [<code>nmea2snr</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.nmea2snr_cl.html) command. Here is an example for a single-day translation (doy 1 of 2026).
 
-<code>nmea2snr cam4 2026 1 -lat 4.03296304 -lon 9.66628988 -height 41.723 -gzip True -snr 88 </code>
+<code>nmea2snr cam4 2025 160 -lat 4.03296304 -lon 9.66628988 -height 41.723 -gzip True -snr 88 </code>
 
 to translate all data (from doy * of 2025 to doy * of 2026):
 
-<code>nmea2snr cam4 2025 * -year:end 2026 -doy_end 366 -lat 4.03296304 -lon 9.66628988 -height 41.723 -gzip True -snr 88</code>
+<code>nmea2snr cam4 2025 160 -year_end 2026 -doy_end 366 -lat 4.03296304 -lon 9.66628988 -height 41.723 -gzip True -snr 88</code>
 
 The SNR files are stored in <code>$REFL_CODE/yyyy/snr/WESL/</code>
 
@@ -99,7 +99,7 @@ The SNR files are stored in <code>$REFL_CODE/yyyy/snr/WESL/</code>
 
 With gnssrefl's[<code>quickLook</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) you can visually examin various azimuth mask settings and quality control parameters. 
 
-<code>quickLook cam4 2026 1 -h1 1 -h2 8</code>
+<code>quickLook cam4 2025 160 -h1 1 -h2 8</code>
 
 [quickLook](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) makes two plots:
 
