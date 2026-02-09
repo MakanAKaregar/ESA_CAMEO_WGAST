@@ -81,7 +81,7 @@ or try the [reflection zone webapp](https://gnss-reflections.org/rzones) with in
 
 Here is a KML map generated from [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
 
-<img src="../_static/FootPrintWesel.jpg" width="600">
+<img src="../assets/cam4_reflection_zone.png" width="600">
 
 ### 3. Translate NMEA format to SNR-ready format
 
