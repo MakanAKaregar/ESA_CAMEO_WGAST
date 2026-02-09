@@ -24,9 +24,9 @@ This RPR is operating in the Wouri estuary.
 
 **Station Name:**  cam4
 
-**Location:** Wesel, Nordrhein-Westfalen, Germany
+**Location:** Wouri estuary, Cameroon
 
-**Archive:**  [zenodo](https://doi.org/10.5281/zenodo.6828597)
+**Archive:**  [zenodo]()
 
 **Ellipsoidal Coordinates:**
 
@@ -41,9 +41,9 @@ This RPR is operating in the Wouri estuary.
 
 ### Data Summary
 
-Station WESL is located on [WSV](https://www.pegelonline.wsv.de/gast/stammdaten?pegelnr=2770040) river gauge's building next to the Rhine river in Wesel, Germany. It is operated by the University of Bonn, Institute of Geodesy and Geoinformation, [APMG](https://www.apmg.uni-bonn.de/).
+Station cam4 is located in Wouri estuary, Cameroon. It is operated by the University of Bonn, Institute of Geodesy and Geoinformation, [APMG](https://www.apmg.uni-bonn.de/) and [the National Cartography Institute (INC)](https://minresi.gov.cm/en/national-institute-of-cartography/), Camroon. 
 
-The RPR antenna is mounted about 13 m abover the water surface. SNR data on the L1 frequency every 1 second are collected for all GPS satellites.
+The RPR antenna is mounted about 5 m abover the water surface. SNR data on the L1 frequency every 1 second are collected for GPS, Glonass and Galileo satellites.
 
 ### 1. Pick up RPR data
 RPR data for period 2020-2022 are publically available from a [zenodo archive](https://doi.org/10.5281/zenodo.6828597). The data record is extended until June 2023 under a [new data veraion](https://zenodo.org/record/8077379).
