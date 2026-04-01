@@ -2,8 +2,7 @@ In the CAMEO-WGAST project, eight RPRs were installed in summer 2025. The workfl
 
 # RPR Processing
 
-This directory contains GNSS-IR processing workflows and post-processing
-scripts used in the CAMEO-WAGST project.
+This directory contains GNSS-IR processing workflows and post-processing using [gnssrefl](https://gnssrefl.readthedocs.io/en/latest/) used in the CAMEO-WAGST project.
 
 It focuses on:
 - GNSS-IR reflector height estimation
@@ -11,13 +10,13 @@ It focuses on:
 - Quality control and filtering
 - Formatting outputs for satellite validation
 
-# Wouri estuary, Camroon
+# Kiribi, Camroon
 
 The data collected here is from a [Raspberry Pi Reflector](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021WR031713). Detailed instructions for RPR setup are provided [here.](https://github.com/MakanAKaregar/RPR/tree/v2.0.0)
 
-This site name is cam2 and is operating in coastal city of Kribi. The GNSS antenna is an L1 antenna mounted sideways and oriented toward the water
+Station cam2 is located in the coastal city of Kribi, Cameroon and it has been operating since June 24, 2025. It is operated by the University of Bonn, Institute of Geodesy and Geoinformation, [APMG](https://www.apmg.uni-bonn.de/) and [the National Cartography Institute (INC)](https://minresi.gov.cm/en/national-institute-of-cartography/), Camroon. The RPR antenna is mounted, on average 6 m above the water surface sideways toward the water and SNR data at the L1 frequency are collected every second for GPS, GLONASS and Galileo satellites. 
 <p align=center>
-<img src="../assets/cam4_sitePhoto.jpeg" width="400" >
+<img src="../assets/cam2_sitePhoto.jpeg" width="400" >
 </p>
 
 ## metadata
@@ -38,62 +37,62 @@ This site name is cam2 and is operating in coastal city of Kribi. The GNSS anten
 
 [Google Map Link](https://maps.app.goo.gl/z1YyVsHXAmmuB3W48)
 
-
-### Data Summary
-
-Station cam2 is located in Kribi, Cameroon. It is operated by the University of Bonn, Institute of Geodesy and Geoinformation, [APMG](https://www.apmg.uni-bonn.de/) and [the National Cartography Institute (INC)](https://minresi.gov.cm/en/national-institute-of-cartography/), Camroon. 
-
-The RPR antenna is mounted, on average 6 m above the water surface. SNR data at the L1 frequency are collected every second for GPS, GLONASS and Galileo satellites.
-
 ### 1. Pick up RPR data
-RPR data for period 01.06.2025 - ??.??.2026 are publically available from a [zenodo archive](). The data record is updated daily under [the University of Bonn's cloud]().
+RPR data for period 24.06.2025 (doy 175, 2025) to ??-??-2026 (doy , 2026) are publically available from a [zenodo archive](). The data record is updated daily under [the University of Bonn's cloud]().
 
-Download all data (~ 1.7 GB, or 3.3 GB for the extended record):
+Download entire data using <code>wget </code>
 
 <code>wget https://zenodo.org/record/6828597/files/MakanAKaregar/RPRatWesel-NMEA.zip?download=1 </code>
 
-or download only a few days data from here:
-
-https://github.com/MakanAKaregar/RPRatWesel
-
+or you can manually download the data for a few selected days from here: https://uni-bonn.sciebo.de/s/QYTywsQeHbkRC62
+ (password: LbPxiyJcf3).
+ 
 Create nmea and station directory:
 
-<code>mkdir -p $REFL_CODE/nmea/cam4</code>
+<code>mkdir -p $REFL_CODE/nmea/cam2</code>
 
-and then store RPR NMEA files in <code>$REFL_CODE/nmea/cam4/yyyy/</code> where <code>yyyy</code> is the year number.
+and then store RPR NMEA files in <code>$REFL_CODE/nmea/cam2/yyyy/</code> where <code>yyyy</code> is the year number.
 
 [$REFL_CODE](https://github.com/kristinemlarson/gnssrefl/blob/master/docs/pages/README_install.md) is an environmental variable to be used by gnssrefl.
 
-### 2. Pick up an azimuth and elevation angle mask
+### 2. Translate NMEA format to SNR-ready format
+
+Now we can translate NMEA data to gnssrefl internal format ([SNR-ready files](https://gnssrefl.readthedocs.io/en/latest/pages/file_structure.html#the-snr-data-format)) using gnssrefl's [<code>nmea2snr</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.nmea2snr_cl.html) command. Here is an example for a single-day translation (doy 1 of 2026).
+
+<code>nmea2snr cam2 2025 160 -lat 2.9414362 -lon 9.9053138  -height 22.982 -gzip True -snr 88 </code>
+
+to translate all data (from doy 175 of 2025 to doy * of 2026):
+
+<code>nmea2snr cam1 2025 175 -year_end 2026 -doy_end ** -lat 2.9414362 -lon 9.9053138  -height 22.982 -gzip True -snr 88</code>
+
+The SNR files are stored in <code>$REFL_CODE/yyyy/snr/cam2/</code>
+
+#### Notes on translation speed and temporal resolution
+
+If you want to translate a large amount of data, you can use `-par 10` to run the translation in parallel. Processing 1-second NMEA data can be relatively slow. To speed up the translation, it is recommended to enable the decimation option in `nmea2snr` using `-dec 5`.
+
+<code>nmea2snr cam1 2025 175 -year_end 2026 -doy_end ** -lat 2.9414362 -lon 9.9053138  -height 22.982 -gzip True -snr 88 -dec 5 -par 10 </code>
+
+The required temporal resolution depends strongly on the reflector height. For this site, a lower temporal resolution, such as 10 or 15 seconds, would still be sufficient.
+
+### 3.Check the azimuth and elevation angle mask
 
 Use either gnssrefl's [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
 
-<code>refl_zones_all.py cam4 -lat 4.03296304 -lon 9.66628988 -height 41.723 -RH 5 -system all -fr 1 -azlist 180 360 -el_list 2 10</code>
+<code>refl_zones_all.py cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -RH 6 -system all -fr 1 -azlist 0 360 -el_list 5 15</code>
 
 or try the [reflection zone webapp](https://gnss-reflections.org/rzones) with input parameters as:
 
-- Lat. 4.03296304
-- Lon. 9.66628988
-- EllipseHt. 41.723
-- Set Reflector Ht. Value 5
-- Elevation Angles 2,10
-- Azimuth Angles Start 180 End 360
+- Lat. 2.9414362
+- Lon. 9.9053138
+- EllipseHt. 22.982
+- Set Reflector Ht. Value 6
+- Elevation Angles 5,15
+- Azimuth Angles Start 0 End 360
 
 Here is a KML map generated from [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
 
-<img src="../assets/cam4_reflection_zone.png" width="600">
-
-### 3. Translate NMEA format to SNR-ready format
-
-Now we should translate NMEA data to gnssrefl internal format ([SNR-ready files](https://gnssrefl.readthedocs.io/en/latest/pages/file_structure.html#the-snr-data-format)) using gnssrefl's [<code>nmea2snr</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.nmea2snr_cl.html) command. Here is an example for a single-day translation (doy 1 of 2026).
-
-<code>nmea2snr cam4 2025 160 -lat 4.03296304 -lon 9.66628988 -height 41.723 -gzip True -snr 88 </code>
-
-to translate all data (from doy * of 2025 to doy * of 2026):
-
-<code>nmea2snr cam4 2025 160 -year_end 2026 -doy_end 366 -lat 4.03296304 -lon 9.66628988 -height 41.723 -gzip True -snr 88</code>
-
-The SNR files are stored in <code>$REFL_CODE/yyyy/snr/WESL/</code>
+<img src="../assets/cam2_reflection_zone.png" width="600">
 
 ### 3. Test quality control parameters
 
