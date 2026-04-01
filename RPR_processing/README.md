@@ -144,15 +144,15 @@ These plots provide more details for quality control. Acceptable reflector heigh
 </p>
 
 
-### 4. Define analysis inputs
+### 4. Define analysis inputs and processing strategy
 
-Based on your finding from [<code>quickLook</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) and the quality control parameters you can now set most of input parameters using [gnssir_input](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.gnssir_input.html) command.
+Based on your finding from [<code>quickLook</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) and the quality control parameters you can now set most of input parameters using [gnssir_input](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.gnssir_input.html) command. This module collects and saves all required parameters (such as station coordinates, frequency settings, elevation and azimuth constraints, refraction models, quality control thresholds) into a structured JSON file. The JSON file is saved in the directory <code>REFL_CODE/input/<site>.json</code>.
 
 Key parameters to set:
 
 The reflector height lower limit <code>-h1</code> and the upper limit <code>-h2</code>. 
 
-Elevation <code>-e1</code> and <code>-e2</code> and azimuth <code>-azlist</code> mask. In our case we set <code>5&le; elevation angle &le;20</code> and <code>250&le; azimuth &le;330</code>
+Elevation <code>-e1</code> and <code>-e2</code> and azimuth <code>-azlist</code> mask. In our case we set <code>7&le; elevation angle &le;15</code> and <code>250&le; azimuth &le;330</code>
 
 List of GNSS constellations and frequencies <code>-frlist</code>. We set to 1 as we have only GPS L1 data.
 
