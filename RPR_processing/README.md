@@ -15,14 +15,14 @@ It focuses on:
 
 The data collected here is from a [Raspberry Pi Reflector](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021WR031713). Detailed instructions for RPR setup are provided [here.](https://github.com/MakanAKaregar/RPR/tree/v2.0.0)
 
-This site name is cam4 and is operating in the Wouri estuary. The GNSS antenna is an L1 antenna mounted sideways and oriented toward the water
+This site name is cam2 and is operating in coastal city of Kribi. The GNSS antenna is an L1 antenna mounted sideways and oriented toward the water
 <p align=center>
 <img src="../assets/cam4_sitePhoto.jpeg" width="400" >
 </p>
 
 ## metadata
 
-**Station Name:**  cam4
+**Station Name:**  cam2
 
 **Location:** Wouri estuary, Cameroon
 
@@ -30,20 +30,20 @@ This site name is cam4 and is operating in the Wouri estuary. The GNSS antenna i
 
 **Ellipsoidal Coordinates:**
 
-- Latitude: 4.03296304
+- Latitude: 2.9414362
 
-- Longitude: 9.66628988 
+- Longitude: 9.9053138 
 
-- Height: 41.723 m
+- Height: 22.982  m
 
-[Google Map Link](https://maps.app.goo.gl/Hg3inK8Rb4ZkBJBS6)
+[Google Map Link](https://maps.app.goo.gl/z1YyVsHXAmmuB3W48)
 
 
 ### Data Summary
 
-Station cam4 is located in Wouri estuary, Cameroon. It is operated by the University of Bonn, Institute of Geodesy and Geoinformation, [APMG](https://www.apmg.uni-bonn.de/) and [the National Cartography Institute (INC)](https://minresi.gov.cm/en/national-institute-of-cartography/), Camroon. 
+Station cam2 is located in Kribi, Cameroon. It is operated by the University of Bonn, Institute of Geodesy and Geoinformation, [APMG](https://www.apmg.uni-bonn.de/) and [the National Cartography Institute (INC)](https://minresi.gov.cm/en/national-institute-of-cartography/), Camroon. 
 
-The RPR antenna is mounted about 5 m abover the water surface. SNR data on the L1 frequency every 1 second are collected for GPS, Glonass and Galileo satellites.
+The RPR antenna is mounted, on average 6 m above the water surface. SNR data at the L1 frequency are collected every second for GPS, GLONASS and Galileo satellites.
 
 ### 1. Pick up RPR data
 RPR data for period 01.06.2025 - ??.??.2026 are publically available from a [zenodo archive](). The data record is updated daily under [the University of Bonn's cloud]().
