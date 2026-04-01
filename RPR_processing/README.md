@@ -15,8 +15,11 @@ It focuses on:
 The data collected here is from a [Raspberry Pi Reflector](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021WR031713). Detailed instructions for RPR setup are provided [here.](https://github.com/MakanAKaregar/RPR/tree/v2.0.0)
 
 Station cam2 is located in the coastal city of Kribi, Cameroon and it has been operating since June 24, 2025. It is operated by the University of Bonn, Institute of Geodesy and Geoinformation, [APMG](https://www.apmg.uni-bonn.de/) and [the National Cartography Institute (INC)](https://minresi.gov.cm/en/national-institute-of-cartography/), Camroon. The RPR antenna is mounted, on average 6 m above the water surface sideways toward the water and SNR data at the L1 frequency are collected every second for GPS, GLONASS and Galileo satellites. 
-<p align=center>
-<img src="../assets/cam2_sitePhoto.jpeg" width="400" >
+
+<p align="center">
+  <img src="../assets/cam2_sitePhoto.jpeg" alt="Site photo station cam2" width="700">
+  <br>
+  <em>Figure 1. Site photo for station cam2. The GNSS antenna is pointing sideways toward the sea</em>
 </p>
 
 ## metadata
@@ -79,7 +82,7 @@ The required temporal resolution depends strongly on the reflector height. For t
 
 We can create standalone Fresnel zone visualizations as KML files for use in Google Earth. This is often done for pre-site assessment or to visualize signal reflection zones across different azimuths and elevations. It gets you a clear map of the footprints and their interaction with surrounding terrain, water surfaces and nearby objects. Use either gnssrefl's [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
 
-<code>refl_zones_all.py cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -RH 6 -system all -fr 1 -azlist 0 360 -el_list 5 15</code>
+<code>refl_zones cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -RH 6 -system all -fr 1 -azlist 0 360 -el_list 5 15</code>
 
 or try the [reflection zone webapp](https://gnss-reflections.org/rzones) with input parameters as:
 
@@ -92,7 +95,11 @@ or try the [reflection zone webapp](https://gnss-reflections.org/rzones) with in
 
 Here is a KML map generated from [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
 
-<img src="../assets/cam2_reflectionZone.jpg" width="600">
+<p align="center">
+  <img src="../assets/cam2_reflectionZone.jpg" alt="Reflection footprints for station cam2" width="700">
+  <br>
+  <em>Figure 2. Reflection footprints for station CAM2 shown in Google Earth.</em>
+</p>
 
 ### 3. Test quality control parameters
 
@@ -102,9 +109,15 @@ We can now generate visual diagnostics using SNR data and look into periodograms
 
 [quickLook](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) makes two plots:
 
+The default `quickLook` settings use an elevation angle range from 5° to 25° and the full azimuth range from 0° to 360°.
+
 1- Periodogram against reflector height for each 90 degree quadrant:
 
-<img src="../assets/quickLook_lsp_cam2.png" width="600">
+<p align="center">
+  <img src="../assets/quickLook_lsp_cam2.png" alt="Periodogram against reflector height" width="700">
+  <br>
+  <em>Figure 3. Quadrant periodograms against reflector height.</em>
+</p>
 
 This displays power spectra for NW, NE, SW, SE quadrants to assess reflector height signal quality by direction.
 
@@ -112,13 +125,16 @@ Since the RPR antenna is installed sideways and faces the sea (pointing west; se
 
 <code>quickLook cam2 2026 1 -h1 1 -h2 10 -snr 88 -e1 7 -e2 15</code>
 
-<img src="../assets/quickLook_lsp_elv715_cam2.png" width="600">
+<p align="center">
+  <img src="../assets/quickLook_lsp_elv715_cam2.png" alt="Periodogram against reflector height for elv 7-15" width="700">
+  <br>
+  <em>Figure 4. Quadrant periodograms and reflector height retrievals using an elevation mask of 7° to 15°.</em>
+</p>
 
 The noisy tracks and many of the double peaks are now removed as the reflections are restricted to the water body only.
 
 2- Reflector height, peak2noise value and peak amplitude against azimuth:
 
-<img src="../assets/cam2_reflectionZone.jpg" width="600">
 
 These plots provide more details for quality control. Acceptable reflector heights are plotted in the top plot in blue. Gray points are the reflector heights do not pass quality control. Their corresponding peak to noise ratio plotted in the middle plot is smaller than a default value of 2.7. Reflector height retrievals for satellite tracks sweeping from the azimuth ~250 to ~330 degrees are acceptable. We often don't set value smaller than 2.7 for the peak to noise ratio.
 
