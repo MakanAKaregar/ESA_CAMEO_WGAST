@@ -1,4 +1,4 @@
-In CAMEO-WAGST prohect, eigh RPR were installed in 2015. The workflow bwlow, is a use case for one of RPRs insatlled in.
+In the CAMEO-WGAST project, eight RPRs were installed in summer 2025. The workflow below presents a use case for one of the RPRs installed.
 
 # RPR Processing
 
@@ -15,7 +15,7 @@ It focuses on:
 
 The data collected here is from a [Raspberry Pi Reflector](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021WR031713). Detailed instructions for RPR setup are provided [here.](https://github.com/MakanAKaregar/RPR/tree/v2.0.0)
 
-This RPR is operating in the Wouri estuary.
+This site name is cam4 and is operating in the Wouri estuary. The GNSS antenna is an L1 antenna mounted sideways and oriented toward the water
 <p align=center>
 <img src="../assets/cam4_sitePhoto.jpeg" width="400" >
 </p>
