@@ -77,7 +77,7 @@ The required temporal resolution depends strongly on the reflector height. For t
 
 ### 3.Check the azimuth and elevation angle mask
 
-Use either gnssrefl's [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
+We can create standalone Fresnel zone visualizations as KML files for use in Google Earth. This is often done for pre-site assessment or to visualize signal reflection zones across different azimuths and elevations. It gets you a clear map of the footprints and their interaction with surrounding terrain, water surfaces and nearby objects. Use either gnssrefl's [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
 
 <code>refl_zones_all.py cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -RH 6 -system all -fr 1 -azlist 0 360 -el_list 5 15</code>
 
@@ -92,25 +92,33 @@ or try the [reflection zone webapp](https://gnss-reflections.org/rzones) with in
 
 Here is a KML map generated from [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
 
-<img src="../assets/cam2_reflection_zone.png" width="600">
+<img src="../assets/cam2_reflectionZone.jpg" width="600">
 
 ### 3. Test quality control parameters
 
-With gnssrefl's[<code>quickLook</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) you can visually examin various azimuth mask settings and quality control parameters. 
+We can now generate visual diagnostics using SNR data and look into periodograms and reflector height estimates as a function of azimuth. This quality assessment is for a rapid evaluation of reflected signal quality and the quality of height retrievals. With gnssrefl's[<code>quickLook</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) you can visually examin various azimuth mask settings and quality control parameters. 
 
-<code>quickLook cam4 2025 160 -h1 1 -h2 8</code>
+<code>quickLook cam2 2026 1 -h1 1 -h2 10 -snr 88</code>
 
 [quickLook](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) makes two plots:
 
 1- Periodogram against reflector height for each 90 degree quadrant:
 
-<img src="../_static/WESLquickLook2.png" width="800">
+<img src="../assets/quickLook_lsp_cam2.png" width="600">
 
-Since the RPR antenna is installed sideways facing the river (pointing toward west), it doesn't record any reflection from the northeast and southeast directions (right upper and lower panels). There is a bridge to the south of the antenna which interferes with the reflected signals so reflection data recorded from the southwest (left lower panel) direction are noisy and not reliable. Left upper panel shows coherent peaks in periodogram of SNR data recorded from the northwest direction. The peaks correspond to a reflector height of around 11 meters. That means the water is ~ 11 meters below the RPR antenna. However, there are several satellite tracks with double peaks that might be related to the reflections from objects very close to the antenna. These double peaks can be removed after imposing a better elevation or azimuth mask.
+This displays power spectra for NW, NE, SW, SE quadrants to assess reflector height signal quality by direction.
+
+Since the RPR antenna is installed sideways and faces the sea (pointing west; see Figure 1), it doesn't record good reflections from the northeast and southeast directions (upper-right and lower-right panels). Also, there is a beach to the southwest of the antenna (Figure 2) and it interferes with the reflected signals. So the reflection recorded from the southwest direction (lower-left panel) are affected by both water and sand. The reflector height varies between 5 and 7 m depending on the tide. Also, a few satellite tracks show double peaks which can be related to reflections from nearby objects very close to the antenna. These double peaks can be removed by applying a more appropriate elevation. Now run `quickLook` with a tighter elevation mask between 7° and 15°.
+
+<code>quickLook cam2 2026 1 -h1 1 -h2 10 -snr 88 -e1 7 -e2 15</code>
+
+<img src="../assets/quickLook_lsp_elv715_cam2.png" width="600">
+
+The noisy tracks and many of the double peaks are now removed as the reflections are restricted to the water body only.
 
 2- Reflector height, peak2noise value and peak amplitude against azimuth:
 
-<img src="../_static/WESLquickLook1.png" width="800">
+<img src="../assets/cam2_reflectionZone.jpg" width="600">
 
 These plots provide more details for quality control. Acceptable reflector heights are plotted in the top plot in blue. Gray points are the reflector heights do not pass quality control. Their corresponding peak to noise ratio plotted in the middle plot is smaller than a default value of 2.7. Reflector height retrievals for satellite tracks sweeping from the azimuth ~250 to ~330 degrees are acceptable. We often don't set value smaller than 2.7 for the peak to noise ratio.
 
