@@ -135,8 +135,14 @@ The noisy tracks and many of the double peaks are now removed as the reflections
 
 2- Reflector height, peak2noise value and peak amplitude against azimuth:
 
+These plots provide more details for quality control. Acceptable reflector heights are plotted in the top plot in blue. Gray points are the reflector heights do not pass quality control. Their corresponding peak to noise ratio plotted in the middle plot is smaller than a default value of 2.7. Reflector height retrievals for satellite tracks with azimuths between 0°–50° and 250°–330° are acceptable. Reflections coming from azimuths between 30° and 210° reach the antenna from the backside and are weak or very noisy, therefore, they are rejected. We often don't set value smaller than 2.7 for the peak to noise ratio.
 
-These plots provide more details for quality control. Acceptable reflector heights are plotted in the top plot in blue. Gray points are the reflector heights do not pass quality control. Their corresponding peak to noise ratio plotted in the middle plot is smaller than a default value of 2.7. Reflector height retrievals for satellite tracks sweeping from the azimuth ~250 to ~330 degrees are acceptable. We often don't set value smaller than 2.7 for the peak to noise ratio.
+<p align="center">
+  <img src="../assets/quickLook_summary_cam2.png" alt="Periodogram against reflector height for elv 7-15" width="900">
+  <br>
+  <em>Figure 5. Comparison of <code>quickLook</code> retrieval metrics using default elevation masks of 5°–25° (left) and 7°–15° (right). The tighter elevation mask reduces noise and yields higher-quality reflector height retrievals.</em>
+</p>
+
 
 ### 4. Define analysis inputs
 
