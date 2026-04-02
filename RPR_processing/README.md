@@ -138,7 +138,7 @@ The noisy tracks and many of the double peaks are now removed as the reflections
 These plots provide more details for quality control. Acceptable reflector heights are plotted in the top plot in blue. Gray points are the reflector heights do not pass quality control. Their corresponding peak to noise ratio plotted in the middle plot is smaller than a default value of 2.7. Reflector height retrievals for satellite tracks with azimuths between 0°–50° and 250°–330° are acceptable. Reflections coming from azimuths between 30° and 210° reach the antenna from the backside and are weak or very noisy, therefore, they are rejected. We often don't set value smaller than 2.7 for the peak to noise ratio.
 
 <p align="center">
-  <img src="../assets/quickLook_summary_cam2.png" alt="Periodogram against reflector height for elv 7-15" width="900">
+  <img src="../assets/quickLook_summary_cam2.png" alt="Periodogram against SNR" width="100%">
   <br>
   <em>Figure 5. Comparison of <code>quickLook</code> retrieval metrics using default elevation masks of 5°–25° (left) and 7°–15° (right). The tighter elevation mask reduces noise and yields higher-quality reflector height retrievals.</em>
 </p>
@@ -157,7 +157,9 @@ List of GNSS constellations and frequencies <code>-frlist</code>. We set to 1 10
 
 We can use the `extension` option to write results to `$REFL_CODE/year/results/site/extension`. This is useful for generating solutions with different processing strategies.
 
-<code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 0 360 -e1 7 -e2 15 -extension 715_0360</code>
+-snr 88 
+
+<code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 0 50 300 360 -e1 7 -e2 15 -extension 715_0360 -snr 88 </code>
 
 ### 5. Analyze data
 
@@ -167,7 +169,11 @@ Here, we process a single day, doy 1 of 2026, setting `plt` option to `True` and
 
 <code>gnssir cam2 2026 1 -plt T -extension 715_0360</code>
 
-<img src="../_static/cam2_gnssir_plot.png" width="800" >
+<p align="center">
+  <img src="../assets/cam2_gnssir0360_plot.png" alt="Periodogram against reflector height for elv 7-15" width="900">
+  <br>
+  <em>Figure 6. SNR data and corresponding periodograms for Galileo, GLONASS and GPS L1 frequencies (left to right). The dominant peaks around 5–7 m (change due to the tide) indicate consistent reflector height estimates across constellations.</em>
+</p>
 
 The daily analysis output files are stored in <code>$REFL_CODE/yyyy/results/cam4</code>
   
