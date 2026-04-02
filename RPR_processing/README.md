@@ -143,30 +143,31 @@ These plots provide more details for quality control. Acceptable reflector heigh
   <em>Figure 5. Comparison of <code>quickLook</code> retrieval metrics using default elevation masks of 5°–25° (left) and 7°–15° (right). The tighter elevation mask reduces noise and yields higher-quality reflector height retrievals.</em>
 </p>
 
-
 ### 4. Define analysis inputs and processing strategy
 
 Based on your finding from [<code>quickLook</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) and the quality control parameters you can now set most of input parameters using [gnssir_input](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.gnssir_input.html) command. This module collects and saves all required parameters (such as station coordinates, frequency settings, elevation and azimuth constraints, refraction models, quality control thresholds) into a structured JSON file. The JSON file is saved in the directory <code>REFL_CODE/input/<site>.json</code>.
 
 Key parameters to set:
 
-The reflector height lower limit <code>-h1</code> and the upper limit <code>-h2</code>. 
+The reflector height lower limit <code>-h1</code> and the upper limit <code>-h2</code>. Note that the default reflector height range is 0–8 m. For elevated installations, you should specify a custom range with `h1`and `h2`
 
-Elevation <code>-e1</code> and <code>-e2</code> and azimuth <code>-azlist</code> mask. In our case we set <code>7&le; elevation angle &le;15</code> and <code>250&le; azimuth &le;330</code>
+Elevation <code>-e1</code> and <code>-e2</code> and azimuth <code>-azlist</code> mask. 
 
-List of GNSS constellations and frequencies <code>-frlist</code>. We set to 1 as we have only GPS L1 data.
+List of GNSS constellations and frequencies <code>-frlist</code>. We set to 1 101 201 corresponding to GPS, GLONASS, and Galileo L1 data, respectively. 
 
-<code>gnssir_input WESL -lat 51.646144 -lon 6.606817 -height 73.057 -h1 6 -h2 16 -e1 5 -e2 20 -frlist 1 -azlist 250 330</code>
+We can use the `extension` option to write results to `$REFL_CODE/year/results/site/extension`. This is useful for generating solutions with different processing strategies.
+
+<code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 0 360 -e1 7 -e2 15 -extension 715_0360</code>
 
 ### 5. Analyze data
 
 Once an appropriate input parameters were set, reflector heights can be estimated using the [gnssir](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.gnssir_cl.html#module-gnssrefl.gnssir_cl) command:
 
-Here, we process a single day, doy 233 of 2021, setting plt option:  
+Here, we process a single day, doy 1 of 2026, setting `plt` option to `True` and add `extension option:  
 
-<code>gnssir cam4 2026 1 -plt T</code>
+<code>gnssir cam2 2026 1 -plt T -extension 715_0360</code>
 
-<img src="../_static/WESL_gnssir_plot.png" width="800" >
+<img src="../_static/cam2_gnssir_plot.png" width="800" >
 
 The daily analysis output files are stored in <code>$REFL_CODE/yyyy/results/cam4</code>
   
