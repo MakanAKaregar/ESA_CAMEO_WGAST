@@ -175,8 +175,14 @@ Here, we process a single day, doy 1 of 2026, setting `plt` option to `True` and
   <em>Figure 6. SNR data and corresponding periodograms for Galileo, GLONASS and GPS L1 frequencies (left to right). The dominant peaks around 5–7 m (change due to the tide) indicate consistent reflector height estimates across constellations.</em>
 </p>
 
-The daily analysis output files are stored in <code>$REFL_CODE/yyyy/results/cam4</code>
-  
+The daily analysis output files are stored in <code>$REFL_CODE/2026/results/cam2/715_0360/</code>
+
+We did not apply any azimuth filter so far. As in Figure 6, some satellite tracks shows double peaks, are noisy or have nearly flat SNR. These signals originate from directions behind the antenna (0<az<50) and can be excluded by defining an azimuth mask in `gnssir_input` and reprocessing the data. We now apply this azimuth mask by:
+
+<code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 200 360 -e1 7 -e2 15 -extension 715_200300 -snr 88 </code>
+
+BC
+
 ### 6. Processing and post-processing time series of reflector heights
 
 We now process 3 months of data from doy ** to doy ** of 2025.
