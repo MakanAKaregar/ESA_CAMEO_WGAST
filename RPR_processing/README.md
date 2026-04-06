@@ -233,13 +233,45 @@ Next plot is number of all reflector heights per constellation each day in `$REF
   <em>Figure 9. Number of all reflector heights per constellation each day.</em>
 </p>
 
-To see if azimuths systematically yield outliers, possibly due to multipath, obstructions or other site-specific effects, we can take a look at `$REFL_CODE/Files/cam2/715_0360/cam2_2026_outliers_wrt_az.png`
+Outlier removal: the default option in `subdaily` is to exclude values that deviate by more than 2.5 standard deviations from the daily mean of reflector height. You can change the default by `-sigma` option. We can take a look at `$REFL_CODE/Files/cam2/715_0360/cam2_2026_outliers.png`
 
 <p align="center">
-  <img src="../assets/cam2_2026_outliers_wrt_az.png" alt="RH relative to azimuth " width="600">
+  <img src="../assets/cam2_2026_outliers.png" alt="RH relative to azimuth " width="600">
   <br>
-  <em>Figure 10. Plot of reflector height relative to azimuth and outliers.</em>
+  <em>Figure 10. Comparison of raw and edited reflector height time series. The top panel shows the raw observations, including outliers (red) and ±2.5σ thresholds (black dashed lines), along with the daily average (blue). The bottom panel shows the cleaned time series after outlier removal. A clearer tidal signal and reduced scatter is visible.</em>
 </p>
+
+To see if azimuths systematically yield outliers we can take a look at `$REFL_CODE/Files/cam2/715_0360/cam2_2026_outliers_wrt_az.png`
+
+<p align="center">
+  <img src="../assets/cam2_2026_outliers_wrt_az170360.png" alt="RH relative to azimuth " width="600">
+  <br>
+  <em>Figure 11. Reflector height as a function of azimuth after applying azimuth filtering (170°–360°). Most outliers are removed and consistent reflector height estimates are observed, with clearer clustering in azimuth sectors facing the water. This highlights the importance of excluding back-azimuth directions affected by land and antenna orientation.</em>
+</p>
+
+An initial cubic spline is fitted to all “cleaned” reflector heights and then H_dot correction is calculated using that spline in `$REFL_CODE/Files/cam2/715_0360/cam2_rhdot2.png`. The reflector height with and without the H_dott correction are compared in terms of RMS values and plots. Three sigma criteria is used to remove outliers (differences between corrected reflector height the and spline fit).
+
+<p align="center">
+  <img src="../assets/cam2_rhdot2.png" alt="RH relative to azimuth " width="600">
+  <br>
+  <em>Figure 12. Reflector height time series after applying H-dot correction and spline fitting. The top panel compares reflector heights with and without H-dot correction and the fitted spline model. The bottom panel shows residuals, where outliers (red) are identified and removed. This leaves a cleaner and more consistent set of observations (blue).</em>
+</p>
+
+We can control spline fit with `–knots` option. The defauls is ...
+
+We can also use `-spline_outlier1` option in meter for using different values rather than 3 sigma criteria for outlier removal.
+
+How big H-dot correction is?
+
+H-dot correction values are plotted in `$REFL_CODE/Files/cam2/715_0360/cam2_rhdot3.png`
+
+<p align="center">
+  <img src="../assets/cam2_rhdot3.png" alt="RH relative to azimuth " width="600">
+  <br>
+  <em>Figure 13. Reflector height correction due to the H-dot effect. The top panel shows the magnitude of the H-dot correction applied to the reflector heights, generally centered around zero with some variability during periods of rapid water-level change. The bottom panel shows the estimated surface velocity (h_dot) and its the spline fit. That highlights sub-daily variations by tidal dynamics..</em>
+</p>
+
+
 
 These points should be filtered before further analysis (e.g., using p2n, amplitude, or azimuth constraints) to ensure a clean and reliable water level time series.
 
@@ -247,6 +279,18 @@ with [daily_avg](https://gnssrefl.readthedocs.io/en/latest/pages/README_dailyavg
 average of reflector height with plots, remove outliers and print daily average reflector height to 
 a text file in <code>$REFL_CODE/Files/wesl/wesl_dailyRH.txt</code>. Note that this command 
 should be used with caution when applying to fast-changing tidal river and sea level. At this site tides are absent.
+
+
+
+
+
+
+
+
+
+
+
+
 
 Positional parameters to set in [daily_avg](https://gnssrefl.readthedocs.io/en/latest/pages/README_dailyavg.html):
 
