@@ -201,7 +201,47 @@ The `subdaily` module is the main post-processing tool for cases where sub-daily
 3. Removes inter-frequency biases  
 4. Fits a final spline model to create an evenly sampled reflector height time series
 
+`subdaily cam2 2026 -rhdot True -if_corr True -plt True -extension 715_0360`
 
+This uses the default settings if you have not defined `subdaily` options in `gnssir_input`. The H-dot correction is applied by default. Reflector height estimates should be consistent across frequencies; large discrepancies may indicate hardware problems or environmental effects.....TBD
+
+The first plot to examine is `$REFL_CODE/Files/cam2/715_0360/cam2_2026_combined.png` which shows the time series of reflector heights for all frequencies, together with azimuth, amplitude and peak2noise ratio.
+
+<p align="center">
+  <img src="../assets/cam2_2026_combined_az0360.png" alt="RH time series for all azimuths" width="600">
+  <br>
+  <em>Figure 7. Time series of all reflector height as a function of azimuth, amplitude and peak2noise ratio</em>
+</p>
+
+The reflector height time series shows a clear main cluster around the true water level (~5–6 m), along with some scattered outliers. These inconsistent reflector heights are not real but are site-specific and in our case are likely caused by multipath from surrounding objects (land, structures, or vegetation) or unfavorable azimuth directions. To reduce these effects, we can use an azimuth mask either in the main processing strategy defined in `gnssir_input` or later during post-processing with the `subdaily` routine. So far, we have not used any azimuth mask. Most of the scattered reflector height (Figure 7) come from signals arriving from directions behind the antenna (0° < az < 170°) where there is land. Also, the antenna is tilted 90° sideways toward the water so it is not expected to receive useful signals from the back. So we now apply an azimuth mask in `subdaily`
+
+`subdaily cam2 2026 -rhdot True -if_corr True -plt True -extension 715_0360 -azim1 170 -azim2 360`
+
+<p align="center">
+  <img src="../assets/cam2_2026_combined_az170360.png" alt="RH time series for azimuths 170 to 360" width="600">
+  <br>
+  <em>Figure 8. Time series of reflector heights for azimuth angles between 170° and 360° as a function of azimuth, amplitude and peak2noise ratio.</em>
+</p>
+
+Most of the scattered outliers are removed and a clear tidal signal can now be observed. 
+
+Next plot is number of all reflector heights per constellation each day in `$REFL_CODE/Files/cam2/715_0360/cam2_2026_Subnvals.png`
+
+<p align="center">
+  <img src="../assets/cam2_2026_Subnvals.png" alt="Number of all reflector heights " width="600">
+  <br>
+  <em>Figure 9. Number of all reflector heights per constellation each day.</em>
+</p>
+
+To see if azimuths systematically yield outliers, possibly due to multipath, obstructions or other site-specific effects, we can take a look at `$REFL_CODE/Files/cam2/715_0360/cam2_2026_outliers_wrt_az.png`
+
+<p align="center">
+  <img src="../assets/cam2_2026_outliers_wrt_az.png" alt="RH relative to azimuth " width="600">
+  <br>
+  <em>Figure 10. Plot of reflector height relative to azimuth and outliers.</em>
+</p>
+
+These points should be filtered before further analysis (e.g., using p2n, amplitude, or azimuth constraints) to ensure a clean and reliable water level time series.
 
 with [daily_avg](https://gnssrefl.readthedocs.io/en/latest/pages/README_dailyavg.html) command, we can derive daily 
 average of reflector height with plots, remove outliers and print daily average reflector height to 
@@ -228,7 +268,6 @@ reflector height (for each day) by more than 30 cm. The value for <code>ReqTrack
 All and daily mean of reflector heights are printed to <code>wesl_allRH.txt</code> and 
 <code>wesl_dailyRH.txt</code> text files in <code>$REFL_CODE/Files/wesl/</code>, respectively.
 
-We did not apply any azimuth filter so far. As in Figure 6, some satellite tracks shows double peaks, are noisy or have nearly flat SNR. These signals originate from directions behind the antenna (0°<az<50°) and can be excluded by defining an azimuth mask in `gnssir_input` and reprocessing the data. We now apply this azimuth mask by:
 
 <code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 200 360 -e1 7 -e2 15 -extension 715_200300 -snr 88</code>
 
