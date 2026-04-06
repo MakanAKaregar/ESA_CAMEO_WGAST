@@ -230,31 +230,32 @@ Next plot is number of all reflector heights per constellation each day in `$REF
 <p align="center">
   <img src="../assets/cam2_2026_Subnvals.png" alt="Number of all reflector heights " width="600">
   <br>
-  <em>Figure 9. Number of all reflector heights per constellation each day.</em>
+  <em>Figure 9. Number of reflector height retrievals per day separated by GNSS constellation (GPS, GLONASS and Galileo) and total counts. The plot shows relatively stable daily retrievals with GPS contributing the largest number of observations while GLONASS and Galileo provide additional coverage. Variations in total counts may reflect data quality, satellite geometry or filtering effects.</em>
 </p>
 
-Outlier removal: the default option in `subdaily` is to exclude values that deviate by more than 2.5 standard deviations from the daily mean of reflector height. You can change the default by `-sigma` option. We can take a look at `$REFL_CODE/Files/cam2/715_0360/cam2_2026_outliers.png`
+#### Outlier removal:
+The default option in `subdaily` is to exclude values that deviate by more than 2.5 standard deviations from the daily mean of reflector height. You can change the default by `-sigma` option. We can take a look at `$REFL_CODE/Files/cam2/715_0360/cam2_2026_outliers.png`
 
 <p align="center">
-  <img src="../assets/cam2_2026_outliers.png" alt="RH relative to azimuth " width="600">
+  <img src="../assets/cam2_2026_outliers.png" alt=" " width="600">
   <br>
-  <em>Figure 10. Comparison of raw and edited reflector height time series. The top panel shows the raw observations, including outliers (red) and ±2.5σ thresholds (black dashed lines), along with the daily average (blue). The bottom panel shows the cleaned time series after outlier removal. A clearer tidal signal and reduced scatter is visible.</em>
+  <em>Figure 10. Comparison of raw and edited reflector height time series. The top panel shows the raw heights including outliers (red) and ±2.5σ thresholds (black dashed lines) and its daily average (blue). The bottom panel shows the cleaned time series after outlier removal. A clearer tidal signal and reduced scatter is visible.</em>
 </p>
 
-To see if azimuths systematically yield outliers we can take a look at `$REFL_CODE/Files/cam2/715_0360/cam2_2026_outliers_wrt_az.png`
+To see if azimuths systematically yield outliers, we can take a look at `$REFL_CODE/Files/cam2/715_0360/cam2_2026_outliers_wrt_az.png`
 
 <p align="center">
-  <img src="../assets/cam2_2026_outliers_wrt_az170360.png" alt="RH relative to azimuth " width="600">
+  <img src="../assets/cam2_2026_outliers_wrt_az170360.png" alt=" " width="600">
   <br>
   <em>Figure 11. Reflector height as a function of azimuth after applying azimuth filtering (170°–360°). Most outliers are removed and consistent reflector height estimates are observed, with clearer clustering in azimuth sectors facing the water. This highlights the importance of excluding back-azimuth directions affected by land and antenna orientation.</em>
 </p>
 
-An initial cubic spline is fitted to all “cleaned” reflector heights and then H_dot correction is calculated using that spline in `$REFL_CODE/Files/cam2/715_0360/cam2_rhdot2.png`. The reflector height with and without the H_dott correction are compared in terms of RMS values and plots. Three sigma criteria is used to remove outliers (differences between corrected reflector height the and spline fit).
+An initial cubic spline is fitted to all “cleaned” reflector heights and then H_dot correction is calculated using that spline in `$REFL_CODE/Files/cam2/715_0360/cam2_rhdot2.png`. The reflector height with and without H_dot correction are compared in terms of RMS values and their plots. Three sigma criteria is used to remove outliers (differences between corrected reflector height the and spline fit).
 
 <p align="center">
-  <img src="../assets/cam2_rhdot2.png" alt="RH relative to azimuth " width="600">
+  <img src="../assets/cam2_rhdot2.png" alt="" width="600">
   <br>
-  <em>Figure 12. Reflector height time series after applying H-dot correction and spline fitting. The top panel compares reflector heights with and without H-dot correction and the fitted spline model. The bottom panel shows residuals, where outliers (red) are identified and removed. This leaves a cleaner and more consistent set of observations (blue).</em>
+  <em>Figure 12. Reflector height time series after applying H-dot correction and spline fitting. The top panel compares reflector heights with and without H-dot correction and the fitted spline model. The bottom panel shows residuals where outliers (red) are removed. This leaves a cleaner and more consistent set of observations (blue).</em>
 </p>
 
 We can control spline fit with `–knots` option. The defauls is ...
