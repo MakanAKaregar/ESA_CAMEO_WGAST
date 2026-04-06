@@ -4,9 +4,9 @@ In the CAMEO-WGAST project, eight RPRs were installed in summer 2025. The workfl
 
 This directory contains GNSS-IR processing workflows and post-processing using [gnssrefl](https://gnssrefl.readthedocs.io/en/latest/) used in the CAMEO-WAGST project.
 
-It focuses on:
+It includes on:
 - GNSS-IR reflector height estimation
-- Water level time series generation
+- Water level time series
 - Quality control and filtering
 - Formatting outputs for satellite validation
 
@@ -26,17 +26,11 @@ Station cam2 is located in the coastal city of Kribi, Cameroon and it has been o
 
 **Station Name:**  cam2
 
-**Location:** Wouri estuary, Cameroon
+**Location:** Coastal city of Kribi, Cameroon
 
-**Archive:**  [zenodo]()
+**Data archive:** NMEA [zenodo]()
 
-**Ellipsoidal Coordinates:**
-
-- Latitude: 2.9414362
-
-- Longitude: 9.9053138 
-
-- Height: 22.982  m
+**Ellipsoidal Coordinates:** Latitude: 2.9414362, Longitude: 9.9053138, Height: 22.982  m
 
 [Google Map Link](https://maps.app.goo.gl/z1YyVsHXAmmuB3W48)
 
