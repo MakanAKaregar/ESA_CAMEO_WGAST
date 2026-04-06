@@ -292,18 +292,4 @@ The secondary spline can be evenly resampled by a user defined interval (e.g. 30
   <em>Figure 15. Final GNSS-IR derived water level time series after applying H-dot and inter-frequency corrections along with spline fitting (8 knots). The time series clearly shows the tidal signal, with smooth sub-daily variations captured by the spline model. A short spike is visible, likely caused by remaining outliers or data gaps.</em>
 </p>
 
-
-
-<code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 200 360 -e1 7 -e2 15 -extension 715_200300 -snr 88</code>
-
-and process doy 1 of 2026 by setting `extention` to `715_200300`
-
-<code>gnssir cam2 2026 1 -plt T -extension 715_200300</code>
-
-
-<p align="center">
-  <img src="../assets/cam2_gnssir200300_plot.png" alt="Periodogram against reflector height for elv 7-15" width="900">
-  <br>
-  <em>Figure 6. SNR data and corresponding periodograms for Galileo, GLONASS and GPS L1 frequencies (left to right). The dominant peaks around 5-7 m (change due to the tide) indicate consistent reflector height estimates across constellations.</em>
-</p>
 Prepared by [Makan Karegar](https://github.com/MakanAKaregar). Last updated June 30, 2023.
