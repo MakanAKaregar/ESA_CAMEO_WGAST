@@ -60,7 +60,7 @@ Now we can translate NMEA data to gnssrefl internal format ([SNR-ready files](ht
 
 to translate all data (from doy 175 of 2025 to doy * of 2026):
 
-<code>nmea2snr cam1 2025 175 -year_end 2026 -doy_end ** -lat 2.9414362 -lon 9.9053138 -height 22.982 -gzip True -snr 88</code>
+<code>nmea2snr cam2 2025 175 -year_end 2026 -doy_end ** -lat 2.9414362 -lon 9.9053138 -height 22.982 -gzip True -snr 88</code>
 
 The SNR files are stored in <code>$REFL_CODE/yyyy/snr/cam2/</code>
 
@@ -161,7 +161,7 @@ We use SNR files with extension `snr88`
 
 Once an appropriate input parameters were set, reflector heights can be estimated using [gnssir](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.gnssir_cl.html#module-gnssrefl.gnssir_cl) command:
 
-Here, we process a single day, doy 1 of 2026, setting `plt` option to `True` and add `extension` option:  
+Here, we process a single day, doy 1 of 2026, setting `plt` option to `True` to see the SNR data and periodograms and adding `extension` option:  
 
 <code>gnssir cam2 2026 1 -plt T -extension 715_0360</code>
 
@@ -173,27 +173,35 @@ Here, we process a single day, doy 1 of 2026, setting `plt` option to `True` and
 
 The daily analysis output files are stored in <code>$REFL_CODE/2026/results/cam2/715_0360/</code>
 
-We did not apply any azimuth filter so far. As in Figure 6, some satellite tracks shows double peaks, are noisy or have nearly flat SNR. These signals originate from directions behind the antenna (0°<az<50°) and can be excluded by defining an azimuth mask in `gnssir_input` and reprocessing the data. We now apply this azimuth mask by:
-
-<code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 200 360 -e1 7 -e2 15 -extension 715_200300 -snr 88 </code>
-
-BC
-
 ### 6. Processing and post-processing time series of reflector heights
 
-We now process 3 months of data from doy ** to doy ** of 2025.
+We now process 3 months of data from doy 1 to doy 90 of 2026.
 
-I maintain the daily archive of this RPR data at [the University of Bonn’s cloud](https://uni-bonn.sciebo.de/s/7CH1ctSPfQeLQbK):
+I maintain the daily archive of this RPR data at [the University of Bonn's cloud](https://uni-bonn.sciebo.de/s/QYTywsQeHbkRC62):
 
-Download 2023 data and then store the NMEA files in <code>$REFL_CODE/nmea/WESL/yyyy/</code>
+Download 2023 data and then store the NMEA files in <code>$REFL_CODE/nmea/cam2/2026/</code>
+(password: LbPxiyJcf3).
 
 Translate NMEA format to SNR format:
 
-<code>nmea2snr WESL 2023 93 -doy_end 117 -lat 51.646144 -lon 6.606817 -height 73.057</code> 
+<code>nmea2snr cam2 2026 1 -doy_end 90 -lat 2.9414362 -lon 9.9053138  -height 22.982 -gzip True -snr 88</code> 
 
-and process the data:
+and process the data. Make sure you set the correct `extension` option. This time, make sure you do not use the `plt` option and if you want faster processing, use `-par` to speed it up.
 
-<code>gnssir WESL 2023 93 -doy_end 171 </code>
+<code>gnssir cam2 2026 1 -doy_end 60 -snr 88 -gzip True -extension 715_0360 -par 10</code>
+
+We now have a time series of reflector heights in `REFL_CODE/2026/results/cam2/715_0360/`. The reflector height (not interprete it as water level) may vary due to tides, storm surges or flooding at coastal sites like `cam2`. Tidal variations shift the LSP periodogram (Figures 3, 4, and 6, note this the reflect daily changes caused by the tide). However, water level can also change a lot during a single satellite pass, e.g., within 20–60 minutes. These changes bias the estimated reflector height. This effect is often called **H-dot correction**, because standard GNSS-IR processing assumes that reflector height remains constant during a satellite arc.
+
+The `subdaily` module is designed to handle this H-dot effect. In this module, a cubic spline is fitted to the reflector height time series and `h_dot` is estimated from it.
+
+The `subdaily` module is the main post-processing tool for cases where sub-daily water-level variations are important such as tides, flooding and storm surges. It performs the following steps:
+
+1. Filters outliers using standard deviation thresholds  
+2. Applies the H-dot correction and spline fitting  
+3. Removes inter-frequency biases  
+4. Fits a final spline model to create an evenly sampled reflector height time series
+
+
 
 with [daily_avg](https://gnssrefl.readthedocs.io/en/latest/pages/README_dailyavg.html) command, we can derive daily 
 average of reflector height with plots, remove outliers and print daily average reflector height to 
@@ -220,5 +228,18 @@ reflector height (for each day) by more than 30 cm. The value for <code>ReqTrack
 All and daily mean of reflector heights are printed to <code>wesl_allRH.txt</code> and 
 <code>wesl_dailyRH.txt</code> text files in <code>$REFL_CODE/Files/wesl/</code>, respectively.
 
+We did not apply any azimuth filter so far. As in Figure 6, some satellite tracks shows double peaks, are noisy or have nearly flat SNR. These signals originate from directions behind the antenna (0°<az<50°) and can be excluded by defining an azimuth mask in `gnssir_input` and reprocessing the data. We now apply this azimuth mask by:
 
+<code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 200 360 -e1 7 -e2 15 -extension 715_200300 -snr 88</code>
+
+and process doy 1 of 2026 by setting `extention` to `715_200300`
+
+<code>gnssir cam2 2026 1 -plt T -extension 715_200300</code>
+
+
+<p align="center">
+  <img src="../assets/cam2_gnssir200300_plot.png" alt="Periodogram against reflector height for elv 7-15" width="900">
+  <br>
+  <em>Figure 6. SNR data and corresponding periodograms for Galileo, GLONASS and GPS L1 frequencies (left to right). The dominant peaks around 5-7 m (change due to the tide) indicate consistent reflector height estimates across constellations.</em>
+</p>
 Prepared by [Makan Karegar](https://github.com/MakanAKaregar). Last updated June 30, 2023.
