@@ -74,11 +74,9 @@ If you want to translate a large amount of data, you can use `-par 10` to run th
 
 The required temporal resolution depends strongly on the reflector height. For this site, a lower temporal resolution, such as 10 or 15 seconds, would still be sufficient.
 
-
-
 ### 3.Check the azimuth and elevation angle mask
 
-We can create standalone Fresnel zone visualizations as KML files for use in Google Earth. This is often done for pre-site assessment or to visualize signal reflection zones across different azimuths and elevations. It gets you a clear map of the footprints and their interaction with surrounding terrain, water surfaces and nearby objects. Use either gnssrefl's [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
+We can create Fresnel zone (reflection zone or footprint) visualizations as KML files. This is often done for pre-site assessment (before installing the instruments) or to visualize signal reflection zones across different azimuths and elevations. They help you see where the GNSS signals interact with the surrounding terrain, water surfaces, and nearby objects. Use either gnssrefl's [<code>refl_zone</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.refl_zones_cl.html) command:
 
 <code>refl_zones cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -RH 6 -system all -fr 1 -azlist 0 360 -el_list 5 15</code>
 
@@ -96,7 +94,7 @@ Here is a KML map generated from [<code>refl_zone</code>](https://gnssrefl.readt
 <p align="center">
   <img src="../assets/cam2_reflectionZone.jpg" alt="Reflection footprints for station cam2" width="700">
   <br>
-  <em>Figure 2. Reflection footprints for station CAM2 shown in Google Earth.</em>
+  <em>Figure 2. Reflection footprints for station cam2 shown in Google Earth.</em>
 </p>
 
 ### 3. Test quality control parameters
@@ -107,19 +105,19 @@ We can now generate visual diagnostics using SNR data and look into periodograms
 
 [quickLook](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.quickLook_cl.html) makes two plots:
 
-The default `quickLook` settings use an elevation angle range from 5° to 25° and the full azimuth range from 0° to 360°.
+The default `quickLook` settings use an elevation angle range from 5° to 30° and the full azimuth range from 0° to 360°. 
 
 1- Periodogram against reflector height for each 90 degree quadrant:
 
 <p align="center">
   <img src="../assets/quickLook_lsp_cam2.png" alt="Periodogram against reflector height" width="700">
   <br>
-  <em>Figure 3. Quadrant periodograms against reflector height.</em>
+  <em>Figure 3. Quadrant periodograms against reflector height using default parameters.</em>
 </p>
 
 This displays power spectra for NW, NE, SW, SE quadrants to assess reflector height signal quality by direction.
 
-Since the RPR antenna is installed sideways and faces the sea (pointing west; see Figure 1), it doesn't record good reflections from the northeast and southeast directions (upper-right and lower-right panels). Also, there is a beach to the southwest of the antenna (Figure 2) and it interferes with the reflected signals. So the reflection recorded from the southwest direction (lower-left panel) are affected by both water and sand. The reflector height varies between 5 and 7 m depending on the tide. Also, a few satellite tracks show double peaks which can be related to reflections from nearby objects very close to the antenna. These double peaks can be removed by applying a more appropriate elevation. Now run `quickLook` with a tighter elevation mask between 7° and 15°.
+Since the RPR antenna is installed sideways and faces the sea (pointing west; see Figure 1), it doesn't record good reflections from the northeast and southeast directions (upper-right and lower-right panels). Also, there is a beach to the southwest of the antenna (Figure 2) and it interferes with the reflected signals. So the reflection recorded from the southwest direction (lower-left panel) are affected by both water and sand. The reflector height varies between 5 and 7 m depending on the tide. Also, a few satellite tracks show double peaks which can be related to reflections from nearby objects very close to the antenna. These double peaks can be removed by applying a more appropriate elevation mask. Now run `quickLook` with a tighter elevation mask between 7° and 15°.
 
 <code>quickLook cam2 2026 1 -h1 1 -h2 10 -snr 88 -e1 7 -e2 15</code>
 
@@ -138,7 +136,7 @@ These plots provide more details for quality control. Acceptable reflector heigh
 <p align="center">
   <img src="../assets/quickLook_summary_cam2.png" alt="Periodogram against SNR" width="100%">
   <br>
-  <em>Figure 5. Comparison of <code>quickLook</code> retrieval metrics using default elevation masks of 5°–25° (left) and 7°–15° (right). The tighter elevation mask reduces noise and yields higher-quality reflector height retrievals.</em>
+  <em>Figure 5. Comparison of <code>quickLook</code> retrieval metrics using default elevation masks of 5°–30° (left) and 7°–15° (right). The tighter elevation mask reduces noise and yields higher-quality reflector height retrievals.</em>
 </p>
 
 ### 4. Define analysis inputs and processing strategy
@@ -155,27 +153,27 @@ List of GNSS constellations and frequencies <code>-frlist</code>. We set to 1 10
 
 We can use the `extension` option to write results to `$REFL_CODE/year/results/site/extension`. This is useful for generating solutions with different processing strategies.
 
--snr 88 
+We use SNR files with extension `snr88` 
 
 <code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 0 50 300 360 -e1 7 -e2 15 -extension 715_0360 -snr 88 </code>
 
 ### 5. Analyze data
 
-Once an appropriate input parameters were set, reflector heights can be estimated using the [gnssir](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.gnssir_cl.html#module-gnssrefl.gnssir_cl) command:
+Once an appropriate input parameters were set, reflector heights can be estimated using [gnssir](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.gnssir_cl.html#module-gnssrefl.gnssir_cl) command:
 
-Here, we process a single day, doy 1 of 2026, setting `plt` option to `True` and add `extension option:  
+Here, we process a single day, doy 1 of 2026, setting `plt` option to `True` and add `extension` option:  
 
 <code>gnssir cam2 2026 1 -plt T -extension 715_0360</code>
 
 <p align="center">
   <img src="../assets/cam2_gnssir0360_plot.png" alt="Periodogram against reflector height for elv 7-15" width="900">
   <br>
-  <em>Figure 6. SNR data and corresponding periodograms for Galileo, GLONASS and GPS L1 frequencies (left to right). The dominant peaks around 5–7 m (change due to the tide) indicate consistent reflector height estimates across constellations.</em>
+  <em>Figure 6. SNR data and corresponding periodograms for Galileo, GLONASS and GPS L1 frequencies (left to right). The dominant peaks around 5-7 m (change due to the tide) indicate consistent reflector height estimates across constellations.</em>
 </p>
 
 The daily analysis output files are stored in <code>$REFL_CODE/2026/results/cam2/715_0360/</code>
 
-We did not apply any azimuth filter so far. As in Figure 6, some satellite tracks shows double peaks, are noisy or have nearly flat SNR. These signals originate from directions behind the antenna (0<az<50) and can be excluded by defining an azimuth mask in `gnssir_input` and reprocessing the data. We now apply this azimuth mask by:
+We did not apply any azimuth filter so far. As in Figure 6, some satellite tracks shows double peaks, are noisy or have nearly flat SNR. These signals originate from directions behind the antenna (0°<az<50°) and can be excluded by defining an azimuth mask in `gnssir_input` and reprocessing the data. We now apply this azimuth mask by:
 
 <code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 200 360 -e1 7 -e2 15 -extension 715_200300 -snr 88 </code>
 
