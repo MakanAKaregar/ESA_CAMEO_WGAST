@@ -268,9 +268,28 @@ H-dot correction values are plotted in `$REFL_CODE/Files/cam2/715_0360/cam2_rhdo
 <p align="center">
   <img src="../assets/cam2_rhdot3.png" alt="RH relative to azimuth " width="600">
   <br>
-  <em>Figure 13. Reflector height correction due to the H-dot effect. The top panel shows the magnitude of the H-dot correction applied to the reflector heights, generally centered around zero with some variability during periods of rapid water-level change. The bottom panel shows the estimated surface velocity (h_dot) and its the spline fit. That highlights sub-daily variations by tidal dynamics..</em>
+  <em>Figure 13. Reflector height correction due to the H-dot effect. The top panel shows the magnitude of the H-dot correction applied to the reflector heights, generally centered around zero with some variability during periods of rapid water-level change. The bottom panel shows the estimated surface velocity (h_dot) and its the spline fit. That highlights sub-daily variations by tidal dynamics.</em>
 </p>
 
+These plots show the results of the first spline fit. A new spline is then fitted to the corrected reflector height time series. The reflector height retrievals from GPS L1 are used as the reference and any offsets in reflector height from the other frequencies are adjusted accordingly. Outliers are then removed again using a three-sigma criterion. The plot is `$REFL_CODE/Files/cam2/715_0360/cam2_rhdot4.png`
+
+<p align="center">
+  <img src="../assets/cam2_rhdot4.png" alt="RH relative to azimuth " width="600">
+  <br>
+  <em>Figure 14. Final reflector height time series after applying H-dot and inter-frequency bias corrections. The cleaned observations (blue) show a consistent tidal signal, while the spline fit (orange) captures the smooth sub-daily variations. Remaining outliers (red) are identified and excluded from the final solution.</em>
+</p>
+
+We can control secondary spline fit with `–knots2` option. The defauls is ...
+
+We can also use `-spline_outlier2` option in meter for using different values rather than 3 sigma criteria for outlier removal.
+
+The secondary spline can be evenly resampled by a user defined interval (e.g. 30 mins , 1 hour, etc) and define the orthometric height time series. These values do not represent actual water levels (could be nonphysical hight variations). The spline fit is affected by data gaps and the chosen time intervals, so it should “not” be used for ###tidal harmonic analysis####.
+
+<p align="center">
+  <img src="../assets/cam2_H0.png" alt="RH relative to azimuth " width="600">
+  <br>
+  <em>Figure 15. Final GNSS-IR derived water level time series after applying H-dot and inter-frequency corrections along with spline fitting (8 knots). The time series clearly shows the tidal signal, with smooth sub-daily variations captured by the spline model. A short spike is visible, likely caused by remaining outliers or data gaps.</em>
+</p>
 
 
 These points should be filtered before further analysis (e.g., using p2n, amplitude, or azimuth constraints) to ensure a clean and reliable water level time series.
