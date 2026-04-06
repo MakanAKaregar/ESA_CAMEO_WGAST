@@ -283,7 +283,7 @@ We can control secondary spline fit with `–knots2` option. The defauls is ...
 
 We can also use `-spline_outlier2` option in meter for using different values rather than 3 sigma criteria for outlier removal.
 
-The secondary spline can be evenly resampled by a user defined interval (e.g. 30 mins , 1 hour, etc) and define the orthometric height time series. These values do not represent actual water levels (could be nonphysical hight variations). The spline fit is affected by data gaps and the chosen time intervals, so it should “not” be used for ###tidal harmonic analysis####.
+The secondary spline can be evenly resampled by a user defined interval (e.g. 30 mins , 1 hour, etc) and define the orthometric height time series (plt in `$REFL_CODE/Files/cam2/715_0360/cam2_H0.png`). Noe that these values do not represent actual water levels (could be nonphysical hight variations). The spline fit is affected by data gaps and the chosen time intervals, so it should “not” be used for tidal harmonic analysis.
 
 <p align="center">
   <img src="../assets/cam2_H0.png" alt="RH relative to azimuth " width="600">
@@ -291,45 +291,6 @@ The secondary spline can be evenly resampled by a user defined interval (e.g. 30
   <em>Figure 15. Final GNSS-IR derived water level time series after applying H-dot and inter-frequency corrections along with spline fitting (8 knots). The time series clearly shows the tidal signal, with smooth sub-daily variations captured by the spline model. A short spike is visible, likely caused by remaining outliers or data gaps.</em>
 </p>
 
-
-These points should be filtered before further analysis (e.g., using p2n, amplitude, or azimuth constraints) to ensure a clean and reliable water level time series.
-
-with [daily_avg](https://gnssrefl.readthedocs.io/en/latest/pages/README_dailyavg.html) command, we can derive daily 
-average of reflector height with plots, remove outliers and print daily average reflector height to 
-a text file in <code>$REFL_CODE/Files/wesl/wesl_dailyRH.txt</code>. Note that this command 
-should be used with caution when applying to fast-changing tidal river and sea level. At this site tides are absent.
-
-
-
-
-
-
-
-
-
-
-
-
-
-Positional parameters to set in [daily_avg](https://gnssrefl.readthedocs.io/en/latest/pages/README_dailyavg.html):
-
-<code>medfilter</code> is a tolerance (in meter) in which all residuals larger than this tolerance are removed.
-
-<code>ReqTracks</code> is the minimum required number of satellite tracks for averaging.
-
-These post-processing parameters are site specific. For example, historical river gauge data (2010–2021) for 
-the Rhine near Wesel indicates the 95th percentile of day-to-day water-level variation amounts 
-to 30 cm, thus we identify a reflector height as outlier when it differs from the median value of all 
-reflector height (for each day) by more than 30 cm. The value for <code>ReqTracks</code> depends on azimuth mask.
-
-<code>daily_avg wesl 0.3 10</code>
-
-<img src="../_static/WESL_SubDaily.png" width="500">
-
-<img src="../_static/WESL_DailyAvg.png" width="500">
-
-All and daily mean of reflector heights are printed to <code>wesl_allRH.txt</code> and 
-<code>wesl_dailyRH.txt</code> text files in <code>$REFL_CODE/Files/wesl/</code>, respectively.
 
 
 <code>gnssir_input cam2 -lat 2.9414362 -lon 9.9053138 -height 22.982 -h1 2 -h2 11 -frlist 1 101 201 -azlist 200 360 -e1 7 -e2 15 -extension 715_200300 -snr 88</code>
