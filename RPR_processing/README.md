@@ -41,7 +41,7 @@ Download entire data using <code>wget </code>
 
 <code>wget https://zenodo.org/record/6828597/files/MakanAKaregar/RPRatWesel-NMEA.zip?download=1 </code>
 
-or you can manually download the data for a few selected days from here: https://uni-bonn.sciebo.de/s/QYTywsQeHbkRC62
+or you can manually download the data for a few selected days from [the University of Bonn's cloud](https://uni-bonn.sciebo.de/s/QYTywsQeHbkRC62).
  (password: LbPxiyJcf3).
  
 Create nmea and station directory:
@@ -56,21 +56,25 @@ and then store RPR NMEA files in <code>$REFL_CODE/nmea/cam2/yyyy/</code> where <
 
 Now we can translate NMEA data to gnssrefl internal format ([SNR-ready files](https://gnssrefl.readthedocs.io/en/latest/pages/file_structure.html#the-snr-data-format)) using gnssrefl's [<code>nmea2snr</code>](https://gnssrefl.readthedocs.io/en/latest/api/gnssrefl.nmea2snr_cl.html) command. Here is an example for a single-day translation (doy 1 of 2026).
 
-<code>nmea2snr cam2 2025 160 -lat 2.9414362 -lon 9.9053138  -height 22.982 -gzip True -snr 88 </code>
+<code>nmea2snr cam2 2026 1 -lat 2.9414362 -lon 9.9053138 -height 22.982 -gzip True -snr 88 </code>
 
 to translate all data (from doy 175 of 2025 to doy * of 2026):
 
-<code>nmea2snr cam1 2025 175 -year_end 2026 -doy_end ** -lat 2.9414362 -lon 9.9053138  -height 22.982 -gzip True -snr 88</code>
+<code>nmea2snr cam1 2025 175 -year_end 2026 -doy_end ** -lat 2.9414362 -lon 9.9053138 -height 22.982 -gzip True -snr 88</code>
 
 The SNR files are stored in <code>$REFL_CODE/yyyy/snr/cam2/</code>
+
+By default, `nmea2snr` module generates SNR data for satellite elevation angles between 5° and 30° and writes the output to files with the `.snr66` extension. Depending on the GNSS site geometry and considering the low-cost characteristics of our GNSS antenna, lower and/or higher elevation angles may also be useful. In our procesing chain, we use the `-snr 88` option which converts all observations with elevation angles from 0° to 90° from NMEA format into SNR format. For more details on SNR-ready file formatting, see [here](https://gnssrefl.readthedocs.io/en/latest/pages/file_structure.html#additional-files). Depending on the GNSS site geometry, lower and/or higher elevation angles may also be useful. In our setup, we use the `-snr 88` option, which converts all observations with elevation angles from 0° to 30° from NMEA format into SNR format.
 
 #### Notes on translation speed and temporal resolution
 
 If you want to translate a large amount of data, you can use `-par 10` to run the translation in parallel. Processing 1-second NMEA data can be relatively slow. To speed up the translation, it is recommended to enable the decimation option in `nmea2snr` using `-dec 5`.
 
-<code>nmea2snr cam1 2025 175 -year_end 2026 -doy_end ** -lat 2.9414362 -lon 9.9053138  -height 22.982 -gzip True -snr 88 -dec 5 -par 10 </code>
+<code>nmea2snr cam1 2025 175 -year_end 2026 -doy_end ** -lat 2.9414362 -lon 9.9053138 -height 22.982 -gzip True -snr 88 -dec 5 -par 10 </code>
 
 The required temporal resolution depends strongly on the reflector height. For this site, a lower temporal resolution, such as 10 or 15 seconds, would still be sufficient.
+
+
 
 ### 3.Check the azimuth and elevation angle mask
 
