@@ -29,7 +29,7 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
 
 # Field campaign in Cameroon
 
-### Site CAM1 is is near a planned major hydropower dam, about 72 km upstream along the Sanaga River
+### Site CAM1 is near a planned major hydropower dam, about 72 km upstream along the Sanaga River.
 
 
 <p align="center">
@@ -60,7 +60,7 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
   <em>.</em>
 </p>
 
-### Site CAM5 is in the Campo (Ntem) River estuary, a narrow estuary with forested banks dominated by a single river
+### Site CAM5 is in the Campo (Ntem) River estuary, a narrow estuary with forested banks dominated by a single river.
 <p align="center">
   <img src="../assets/CAM5_fieldwork.jpg" width="1200">
   <br>
@@ -74,26 +74,26 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
   <em>.</em>
 </p>
 
-### Site CAM7 is next to the Edea Dam, a major hydropower facility regulating river discharge
+### Site CAM7 is next to the Edea Dam, a major hydropower facility regulating river discharge.
 <p align="center">
   <img src="../assets/CAM7_fieldwork.jpg" width="1200">
   <br>
   <em>.</em>
 </p>
 
-### Site CAM8 is in Limbe, along a volcanic coastline with complex near-shore bathymetry and energetic wave conditions
+### Site CAM8 is in Limbe, along a volcanic coastline with complex near-shore bathymetry and energetic wave conditions.
 <p align="center">
   <img src="../assets/CAM8_fieldwork.jpg" width="1200">
 
 ## Data access
 
 Water level time series from all RPR stations are openly available and updated daily at:
-🔗 [www.GNSS4SurfaceWater.com](http://www.GNSS4SurfaceWater.com)
+[www.GNSS4SurfaceWater.com](http://www.GNSS4SurfaceWater.com)
 
 Raw NMEA data are also uploaded daily to the University of Bonn cloud.
 
 For the full project documentation, processing workflows and Sentinel-3 & Sentinel-6 altimetry processing validation code, see the:
-🔗 [Main repository README](https://github.com/MakanAKaregar/CAMEO_WGAST)
+[Main repository README](https://github.com/MakanAKaregar/CAMEO_WGAST)
   <br>
   <em>.</em>
 </p>
