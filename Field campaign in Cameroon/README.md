@@ -78,6 +78,16 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
 ### Site CAM8 is in Limbe, along a volcanic coastline with complex near-shore bathymetry and energetic wave conditions
 <p align="center">
   <img src="../assets/CAM8_fieldwork.jpg" width="1200">
+
+## Data Access
+
+Water level time series from all RPR stations are openly available and updated daily at:
+🔗 [www.GNSS4SurfaceWater.com](http://www.GNSS4SurfaceWater.com)
+
+Raw NMEA data are also uploaded daily to the University of Bonn cloud.
+
+For the full project documentation, processing workflows and Sentinel-3 & Sentinel-6 altimetry processing validation code, see the:
+🔗 [Main Repository README](https://github.com/MakanAKaregar/CAMEO_WGAST)
   <br>
   <em>.</em>
 </p>
