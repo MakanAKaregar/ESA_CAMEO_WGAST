@@ -93,7 +93,7 @@ Water level time series from all RPR stations are openly available and updated d
 Raw NMEA data are also uploaded daily to the University of Bonn cloud.
 
 For the full project documentation, processing workflows and Sentinel-3 & Sentinel-6 altimetry processing validation code, see the:
-🔗 [Main Repository README](https://github.com/MakanAKaregar/CAMEO_WGAST)
+🔗 [Main repository README](https://github.com/MakanAKaregar/CAMEO_WGAST)
   <br>
   <em>.</em>
 </p>
