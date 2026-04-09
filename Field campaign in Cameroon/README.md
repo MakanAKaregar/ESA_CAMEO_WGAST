@@ -1,7 +1,7 @@
-Around 300 kg of equipment including solar panels, lead-acid batteries, enclosure boxes, GNSS receivers and antennas, steel profiles and installation tools, was prepared and shipped to Cameroon. 
+RPR assembly in the DETECT project lab [(SFB 1502)](https://sfb1502.de/) at the University of Bonn. Around 300 kg of equipment including solar panels, lead-acid batteries, enclosure boxes, GNSS receivers and antennas, steel profiles and installation tools, was prepared and shipped to Cameroon.
 
 <p align="center">
-  <img src="../assets/UBonn_KaregarChen.jpg" width="700">
+  <img src="../assets/UBonn_KaregarChen.jpg" width="1200">
   <br>
 </p>
 
