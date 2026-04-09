@@ -1,3 +1,5 @@
+This folder documents the field campaign carried out in Cameroon between May and June 2025 as part of the [ESA-funded CAMEO-WAGST project](https://github.com/MakanAKaregar/CAMEO_WGAST). It covers the preparation, logistics and deployment of eight [Raspberry Pi Reflector (RPR)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021WR031713) stations across a range of hydrodynamic environments, including the Sanaga River, coastal sites, estuaries and port facilities.
+
 RPR assembly in the DETECT project lab [(SFB 1502)](https://sfb1502.de/) at the University of Bonn. Around 300 kg of equipment including solar panels, lead-acid batteries, enclosure boxes, GNSS receivers and antennas, steel profiles and installation tools, was prepared and shipped to Cameroon.
 
 <p align="center">
@@ -16,7 +18,7 @@ Six stations covered the coastline:
 CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of Kribi), CAM8 (near the coastal city of Limbe), CAM6 (within the port of Kribi)
 
 <p align="center">
-  <img src="../assets/Map.jpg" alt="Reflection footprints for station cam2" width="700">
+  <img src="../assets/Map.jpg" alt="Reflection footprints for station cam2" width="1000">
   <br>
   <em>Figure 1. Location of the eight RPR stations along the Cameroonian coast and the Sanaga River in the Gulf of Guinea. The red, yellow and black lines indicate the ground tracks of Sentinel-6, Sentinel-3, and SWOT, respectively.</em>
 </p>
@@ -33,6 +35,14 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
 ### Site CAM2 is near the coastal cities of Kribi. Kribi hosts one of Cameroon’s main deep-sea ports and is influenced by port operations and coastal development.
 <p align="center">
   <img src="../assets/CAM2_fieldwork.jpg" width="1200">
+  <br>
+  <em>.</em>
+</p>
+
+### Site CAM3 is in 
+
+<p align="center">
+  <img src="../assets/CAM3_fieldwork.jpg" width="1200">
   <br>
   <em>.</em>
 </p>
