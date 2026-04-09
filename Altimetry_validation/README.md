@@ -1,4 +1,4 @@
-## Water Level monitoring using satellite altimetry: Sentinel-3A/B & Sentinel-6 hydrological validation Workflow  
+# Water Level monitoring using satellite altimetry: Sentinel-3A/B & Sentinel-6 hydrological validation Workflow  
 
 Within the **CAMEO-WGAST project**, eight **Raspberry Pi Reflectors (RPRs)** were deployed in summer 2025 to provide **in-situ water level measurements** across selected riverine and coastal environments.
 This repository presents a **comprehensive altimetry validation workflow**, demonstrating how satellite-derived **water surface heights (SSH)** from:
