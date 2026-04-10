@@ -53,7 +53,7 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
   <em>.</em>
 </p>
 
-### Site CAM4 is in the Wouri estuary near the large city of Douala, a wide tidal estuary with convergence of multiple rivers and channels.
+### Site CAM4 is in the Wouri estuary near the large city of Douala, a wide tidal estuary with convergence of multiple rivers and channels (Wouri, Mungo Dibamba).
 <p align="center">
   <img src="../assets/CAM4_fieldwork.jpg" width="1200">
   <br>
