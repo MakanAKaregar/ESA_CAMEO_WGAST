@@ -29,50 +29,44 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
 
 # Field campaign in Cameroon
 
-### Site CAM1 is near a planned major hydropower dam, about 72 km upstream along the Sanaga River around Song Mbenguè village.
+### Site CAM1 is near a planned major hydropower dam ~ 72 km upstream along the Sanaga River around Song Mbenguè village.
 
 
 <p align="center">
   <img src="../assets/CAM1_fieldwork.jpg" width="1200">
   <br>
-  <em>.</em>
-</p>
+  </p>
 
 ### Site CAM2 is near the coastal cities of Kribi. Kribi hosts one of Cameroon’s main deep-sea ports and is influenced by port operations and coastal development.
 <p align="center">
   <img src="../assets/CAM2_fieldwork.jpg" width="1200">
   <br>
-  <em>.</em>
 </p>
 
-### Site CAM3 is located near the coastline at Cap Cameroun, a major hotspot for coastal erosion along Cameroon’s Wouri estuary. The shoreline at Cap Cameroun is retreating at an estimated rate of 15 m per year, with more than 900 meters of land lost between 1975 and 2020. 
+### Site CAM3 is near the coastline at Cap Cameroun, a major hotspot for coastal erosion along Cameroon’s Wouri estuary. The shoreline at Cap Cameroun is retreating at rate of ~ 15 m per year with > 900 m of land lost 1975-2020. 
 
 <p align="center">
   <img src="../assets/CAM3_fieldwork.jpg" width="1200">
   <br>
-  <em>.</em>
-</p>
+  </p>
 
 ### Site CAM4 is in the Wouri estuary near the large city of Douala, a wide tidal estuary with convergence of multiple rivers and channels (Wouri, Mungo, Dibamba).
 <p align="center">
   <img src="../assets/CAM4_fieldwork.jpg" width="1200">
   <br>
-  <em>.</em>
-</p>
+  </p>
 
-### Site CAM5 is located in the Campo (Ntem) River estuary, a narrow estuary with forested banks dominated by a single river, where the interaction between the river and the Atlantic Ocean is particularly pronounced.
+### Site CAM5 is in the Campo (Ntem) River estuary, a narrow estuary with forested banks dominated by a single river where the interaction between the river and the Atlantic Ocean is large.
 <p align="center">
   <img src="../assets/CAM5_fieldwork.jpg" width="1200">
   <br>
-  <em>.</em>
 </p>
 
-### Site CAM6 is installed within the port of Kribi, a major commercial harbor along the Cameroonian coast.
+### Site CAM6 is within the port of Kribi, a major commercial harbor along the Cameroonian coast.
 <p align="center">
   <img src="../assets/CAM6_fieldwork.jpg" width="1200">
   <br>
-  <em>.</em>
-</p>
+  </p>
 
 ### Site CAM7 is next to the Edea Dam, a major hydropower facility regulating river discharge.
 <p align="center">
@@ -87,20 +81,23 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
   
 
 ## Lessons learned from the GNSS-IR field campaigns in Cameroon
-The field campaign in Cameroon highlighted several operational, logistical, and environmental challenges that are critical for future deployments in similar tropical coastal environments.
+#### Permits and site access
+Getting access to strategic sites like dams and naval bases requires official authorization, so reaching out to local authorities and stakeholders early on is key to keeping field operations on track.
 
-One key lesson concerns **administrative coordination and site access**. Access to strategic locations such as dams and naval bases requires prior authorization, making early engagement and strong coordination with local authorities and stakeholders essential for successful field operations.
+#### Getting to the sites
+Field mobility was a challenge. Road conditions at several sites were poor with muddy tracks and difficult terrain. This was particularly evident at CAM5 (Campo) and CAM1 where access can vary significantly by season.
 
-The campaign also revealed significant **mobility constraints in the field**. Transportation to certain sites proved difficult due to poor road conditions, particularly muddy and hard-to-access routes. This was especially evident at sites such as CAM5 (Campo) and CAM1, where access can be severely limited depending on seasonal conditions.
+####  Connectivity and data transmission
+GSM network reliability was a recurring issue in remote areas. At sites like CAM3 (Cap Cameroun) and CAM5 (Campo), mobile network antennas depend on generators for power. When fuel runs out, the network goes down — and so does data transmission.
 
-Another important challenge was **limited reliability of GSM networks for data transmission**. In remote areas like CAM3 (Cap Cameroun) and CAM5 (Campo), GSM relay antennas often rely on generators due to the lack of a stable electricity supply. When these generators are not fueled, network interruptions occur, leading to disruptions in data transmission.
+#### Harsh coastal environments
+Coastal conditions took a toll on the equipment. High salinity and oceanic heat flux accelerated wear on GNSS components and could affect measurement quality if left unaddressed. Some maintenance and adequate protection are essential to keep the stations running and data flowing.
 
-Environmental conditions also played a significant role. The campaign demonstrated that **coastal factors such as oceanic heat flux and high salinity** can negatively affect the performance and durability of GNSS equipment. These conditions accelerate wear and may introduce measurement uncertainties if not properly mitigated. Regular maintenance and protective measures for GNSS-IR equipments are therefore necessary to ensure data continuity.
+####  Monumentation and equipment security
+The campaign highlighted two practical concerns: physical stability and security. In areas exposed to strong coastal erosion or heavy human activity, careful anchoring is essential. Where possible, stations should also be protected against theft or disturbance.
 
-The campaign also highlighted the need for **robust monumentation and equipment security**. In areas experiencing strong coastal erosion or human activity, installations must be carefully anchored and, where possible, protected against theft or disturbance.
-
-Overall, the experience emphasizes that successful GNSS-IR deployment in Cameroon requires not only technical expertise but also careful logistical planning, strong institutional collaboration, and adaptation to harsh coastal environmental conditions.
-
+#### Overall
+Successful GNSS-IR deployment in Cameroon demands more than technical know-how. Careful logistical planning, strong institutional collaboration and the ability to adapt to harsh coastal conditions are just as important as the technology itself.
 ## Data access
 
 Water level time series from all RPR stations are openly available and updated daily at:
