@@ -29,7 +29,7 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
 
 # Field campaign in Cameroon
 
-### Site CAM1 is near a planned major hydropower dam, about 72 km upstream along the Sanaga River.
+### Site CAM1 is near a planned major hydropower dam, about 72 km upstream along the Sanaga River around Song Mbenguè village.
 
 
 <p align="center">
