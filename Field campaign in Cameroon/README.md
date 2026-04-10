@@ -15,7 +15,7 @@ Eight RPR GNSS-IR sensors were deployed across a range of hydrodynamic environme
 
 Two stations were installed along the Sanaga River: 
 
-CAM7 adjacent to Edea hydropower dam, CAM1 near a planned dam.
+CAM7 adjacent to Edea hydropower dam, CAM1 near a planned dam at Song Mbenguè.
 
 Six stations covered the coastline: 
 
@@ -53,14 +53,14 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
   <em>.</em>
 </p>
 
-### Site CAM4 is in the Wouri estuary near the large city of Douala, a wide tidal estuary with convergence of multiple rivers and channels (Wouri, Mungo Dibamba).
+### Site CAM4 is in the Wouri estuary near the large city of Douala, a wide tidal estuary with convergence of multiple rivers and channels (Wouri, Mungo, Dibamba).
 <p align="center">
   <img src="../assets/CAM4_fieldwork.jpg" width="1200">
   <br>
   <em>.</em>
 </p>
 
-### Site CAM5 is in the Campo (Ntem) River estuary, a narrow estuary with forested banks dominated by a single river.
+### Site CAM5 is located in the Campo (Ntem) River estuary, a narrow estuary with forested banks dominated by a single river, where the interaction between the river and the Atlantic Ocean is particularly pronounced.
 <p align="center">
   <img src="../assets/CAM5_fieldwork.jpg" width="1200">
   <br>
