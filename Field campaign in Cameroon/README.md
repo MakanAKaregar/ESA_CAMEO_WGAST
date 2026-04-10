@@ -20,7 +20,7 @@
   - [Overall](#overall)
 - [Data access](#data-access)
   
-This folder documents the field campaign carried out in Cameroon between May and June 2025 as part of the [ESA-funded CAMEO-WAGST project](https://github.com/MakanAKaregar/CAMEO_WGAST), a collaboration between the Institute of Geodesy and Geoinformation at the University of Bonn, Germany, and the National Institute of Cartography in Cameroon. It covers the preparation, logistics and deployment of eight [Raspberry Pi Reflector (RPR)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021WR031713) stations across a range of hydrodynamic environments, including the Sanaga River, coastal sites, estuaries and port facilities.
+This repository documents the field campaign carried out in Cameroon between May and June 2025 as part of the [ESA-funded CAMEO-WAGST project](https://github.com/MakanAKaregar/CAMEO_WGAST), a collaboration between the Institute of Geodesy and Geoinformation at the University of Bonn, Germany, and the National Institute of Cartography in Cameroon. It covers the preparation, logistics and deployment of eight [Raspberry Pi Reflector (RPR)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021WR031713) stations across a range of hydrodynamic environments, including the Sanaga River, coastal sites, estuaries and port facilities.
 
 ## Equipment and shipping
 
