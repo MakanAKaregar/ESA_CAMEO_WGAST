@@ -2,7 +2,7 @@ In the CAMEO-WGAST project, eight RPRs were installed in summer 2025. The workfl
 
 ## Contents
 
-- [Overview](#rpr-processing)
+- [Overview](#Overview)
 - [Kribi, Cameroon](#kribi-cameroon)
 - [Metadata](#metadata)
 - [Processing workflow](#processing-workflow)
@@ -14,7 +14,7 @@ In the CAMEO-WGAST project, eight RPRs were installed in summer 2025. The workfl
   - [6. Processing and post-processing time series of reflector heights](#6-processing-and-post-processing-time-series-of-reflector-heights)
     - [Outlier removal](#outlier-removal)
       
-# RPR Processing
+# Overview
 
 This directory contains GNSS-IR processing workflows and post-processing using [gnssrefl](https://gnssrefl.readthedocs.io/en/latest/) used in the CAMEO-WAGST project.
 
@@ -23,6 +23,8 @@ It includes on:
 - Water level time series
 - Quality control and filtering
 - Formatting outputs for satellite validation
+
+#### Note: gnssrefl is an open-source Python package led by [Kristine Larson](https://github.com/kristinemlarson) and maintained by the community. It must be installed on your machine before running the workflows in this repository. For installation instructions, visit [gnssrefl page](https://gnssrefl.readthedocs.io/en/latest/)
 
 # Kiribi, Camroon
 
