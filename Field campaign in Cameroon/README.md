@@ -84,6 +84,22 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
 ### Site CAM8 is in Limbe, along a volcanic coastline with complex near-shore bathymetry and energetic wave conditions.
 <p align="center">
   <img src="../assets/CAM8_fieldwork.jpg" width="1200">
+  
+
+## Lessons learned from the GNSS-IR field campaigns in Cameroon
+The field campaign in Cameroon highlighted several operational, logistical, and environmental challenges that are critical for future deployments in similar tropical coastal environments.
+
+One key lesson concerns **administrative coordination and site access**. Access to strategic locations such as dams and naval bases requires prior authorization, making early engagement and strong coordination with local authorities and stakeholders essential for successful field operations.
+
+The campaign also revealed significant **mobility constraints in the field**. Transportation to certain sites proved difficult due to poor road conditions, particularly muddy and hard-to-access routes. This was especially evident at sites such as CAM5 (Campo) and CAM1, where access can be severely limited depending on seasonal conditions.
+
+Another important challenge was **limited reliability of GSM networks for data transmission**. In remote areas like CAM3 (Cap Cameroun) and CAM5 (Campo), GSM relay antennas often rely on generators due to the lack of a stable electricity supply. When these generators are not fueled, network interruptions occur, leading to disruptions in data transmission.
+
+Environmental conditions also played a significant role. The campaign demonstrated that **coastal factors such as oceanic heat flux and high salinity** can negatively affect the performance and durability of GNSS equipment. These conditions accelerate wear and may introduce measurement uncertainties if not properly mitigated. Regular maintenance and protective measures for GNSS-IR equipments are therefore necessary to ensure data continuity.
+
+The campaign also highlighted the need for **robust monumentation and equipment security**. In areas experiencing strong coastal erosion or human activity, installations must be carefully anchored and, where possible, protected against theft or disturbance.
+
+Overall, the experience emphasizes that successful GNSS-IR deployment in Cameroon requires not only technical expertise but also careful logistical planning, strong institutional collaboration, and adaptation to harsh coastal environmental conditions.
 
 ## Data access
 
