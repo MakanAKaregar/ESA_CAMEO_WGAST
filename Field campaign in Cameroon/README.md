@@ -45,7 +45,7 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
   <em>.</em>
 </p>
 
-### Site CAM3 is in 
+### Site CAM3 is located near the coastline at Cap Cameroun, a major hotspot for coastal erosion along Cameroon’s Wouri estuary. The shoreline at Cap Cameroun is retreating at an estimated rate of 15 m per year, with more than 900 meters of land lost between 1975 and 2020. 
 
 <p align="center">
   <img src="../assets/CAM3_fieldwork.jpg" width="1200">
