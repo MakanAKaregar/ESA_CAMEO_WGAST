@@ -1,5 +1,19 @@
 In the CAMEO-WGAST project, eight RPRs were installed in summer 2025. The workflow below presents a use case for one of the RPRs installed.
 
+## Contents
+
+- [Overview](#rpr-processing)
+- [Kribi, Cameroon](#kribi-cameroon)
+- [Metadata](#metadata)
+- [Processing workflow](#processing-workflow)
+  - [1. Pick up RPR data](#1-pick-up-rpr-data)
+  - [2. Translate NMEA format to SNR-ready format](#2-translate-nmea-format-to-snr-ready-format)
+  - [3. Check the azimuth and elevation angle mask](#3check-the-azimuth-and-elevation-angle-mask)
+  - [4. Define analysis inputs and processing strategy](#4-define-analysis-inputs-and-processing-strategy)
+  - [5. Analyze data](#5-analyze-data)
+  - [6. Processing and post-processing time series of reflector heights](#6-processing-and-post-processing-time-series-of-reflector-heights)
+    - [Outlier removal](#outlier-removal)
+      
 # RPR Processing
 
 This directory contains GNSS-IR processing workflows and post-processing using [gnssrefl](https://gnssrefl.readthedocs.io/en/latest/) used in the CAMEO-WAGST project.
