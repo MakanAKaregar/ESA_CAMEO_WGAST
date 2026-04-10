@@ -13,6 +13,21 @@ Poject PIs: [Makan Karegar (University of Bonn)](https://www.igg.uni-bonn.de/apm
 
 ---
 
+## Contents
+
+- [Overview](#overview)
+- [Key objectives](#key-objectives-of-the-cameo-wagst-project)
+- [Repository scope](#repository-scope)
+  - [GNSS-IR data acquisition & processing](#1-gnss-ir-data-acquisition-and-processing-using-rpr-and-gnssrefl-python-package)
+  - [Sentinel-3 & Sentinel-6 altimetry processing](#2-sentinel-3ab-and-sentinel-6-altimetry-processing)
+  - [Altimetry validation](#3-validation-of-sentinel-3ab-and-sentinel-6-inland-and-coastal-water-level)
+  - [RPR sensor setup & assembly](#4-reccomendation-for-installing-low-cost-gnss_ir-sensors)
+  - [Field campaign in Cameroon](#5-field-deployment-conditions-and-installation-activities-at-rpr-sites-in-cameroon)
+- [Data access](#data-access)
+- [Citation](#citation)
+- [License](#license)
+- [Contact](#contact)
+
 ## Overview
 
 This repository hosts the end-to-end processing workflow developed within the CAMEO-WAGST project funded by ESA (2024-2026).  
