@@ -90,7 +90,9 @@ This project follows an open-source philosophy and is licensed under the GNU Gen
 ---
 
 ## Contact
-
-**Project leads**
-- University of Bonn (Germany): Makan Karegar (karegar@uni-bonn.de), Jiaming Chen (jchen1@uni-bonn.de)  
+#### Project leads:
+- University of Bonn (Germany): Makan Karegar (karegar@uni-bonn.de)
 - National Institute of Cartography (Cameroon): Loudi Yap (loudiyap@yahoo.fr)
+#### Collaborators:
+- University of Bonn (Germany): Jiaming Chen, Jürgen Kusche
+- National Institute of Cartography (Cameroon): Abdou Nasser Ngouh, Chrétien Ngouanet, Ludovic Houetchak Kandé, Joseph Kamguia
