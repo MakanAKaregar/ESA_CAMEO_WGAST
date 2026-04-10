@@ -1,3 +1,25 @@
+## Contents
+
+- [Equipment and shipping](#equipment--shipping)
+- [Stations map](#stations-map)
+- [Field campaign in Cameroon](#field-campaign-in-cameroon)
+  - [CAM1 — Sanaga River (Song Mbenguè)](#site-cam1-is-near-a-planned-major-hydropower-dam--72-km-upstream-along-the-sanaga-river-around-song-mbengué-village)
+  - [CAM2 — Kribi coast](#site-cam2-is-near-the-coastal-cities-of-kribi-kribi-hosts-one-of-cameroons-main-deep-sea-ports-and-is-influenced-by-port-operations-and-coastal-development)
+  - [CAM3 — Cap Cameroun](#site-cam3-is-near-the-coastline-at-cap-cameroun-a-major-hotspot-for-coastal-erosion-along-cameroons-wouri-estuary-the-shoreline-at-cap-cameroun-is-retreating-at-rate-of--15-m-per-year-with--900-m-of-land-lost-1975-2020)
+  - [CAM4 — Wouri estuary](#site-cam4-is-in-the-wouri-estuary-near-the-large-city-of-douala-a-wide-tidal-estuary-with-convergence-of-multiple-rivers-and-channels-wouri-mungo-dibamba)
+  - [CAM5 — Campo (Ntem) Estuary](#site-cam5-is-in-the-campo-ntem-river-estuary-a-narrow-estuary-with-forested-banks-dominated-by-a-single-river-where-the-interaction-between-the-river-and-the-atlantic-ocean-is-large)
+  - [CAM6 — Port of Kribi](#site-cam6-is-within-the-port-of-kribi-a-major-commercial-harbor-along-the-cameroonian-coast)
+  - [CAM7 — Edea dam](#site-cam7-is-next-to-the-edea-dam-a-major-hydropower-facility-regulating-river-discharge)
+  - [CAM8 — Limbe coast](#site-cam8-is-in-limbe-along-a-volcanic-coastline-with-complex-near-shore-bathymetry-and-energetic-wave-conditions)
+- [Lessons learned](#lessons-learned-from-the-gnss-ir-field-campaigns-in-cameroon)
+  - [Permits & site access](#permits-and-site-access)
+  - [Field mobility](#getting-to-the-sites)
+  - [Connectivity and data transmission](#connectivity-and-data-transmission)
+  - [Harsh coastal environments](#harsh-coastal-environments)
+  - [Monumentation and equipment ecurity](#monumentation-and-equipment-security)
+  - [Overall](#overall)
+- [Data access](#data-access)
+  
 This folder documents the field campaign carried out in Cameroon between May and June 2025 as part of the [ESA-funded CAMEO-WAGST project](https://github.com/MakanAKaregar/CAMEO_WGAST), a collaboration between the Institute of Geodesy and Geoinformation at the University of Bonn, Germany, and the National Institute of Cartography in Cameroon. It covers the preparation, logistics and deployment of eight [Raspberry Pi Reflector (RPR)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021WR031713) stations across a range of hydrodynamic environments, including the Sanaga River, coastal sites, estuaries and port facilities.
 
 ## Equipment & shipping
