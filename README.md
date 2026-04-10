@@ -18,11 +18,13 @@ Poject PIs: [Makan Karegar (University of Bonn)](https://www.igg.uni-bonn.de/apm
 - [Overview](#overview)
 - [Key objectives](#key-objectives-of-the-cameo-wagst-project)
 - [Repository scope](#repository-scope)
-  - [GNSS-IR data acquisition & processing](#1-gnss-ir-data-acquisition-and-processing-using-rpr-and-gnssrefl-python-package)
-  - [Sentinel-3 & Sentinel-6 altimetry processing](#2-sentinel-3ab-and-sentinel-6-altimetry-processing)
-  - [Altimetry validation](#3-validation-of-sentinel-3ab-and-sentinel-6-inland-and-coastal-water-level)
-  - [RPR sensor setup & assembly](#4-reccomendation-for-installing-low-cost-gnss_ir-sensors)
-  - [Field campaign in Cameroon](#5-field-deployment-conditions-and-installation-activities-at-rpr-sites-in-cameroon)
+  - [RPR sensor assembly and setup](#1RPR-sensor-assembly-and-setup)
+  - [Field campaign in Cameroon](#2Field-campaign-in-Cameroon)
+  - [GNSS-IR RPR data acquisition & processing](#3GNSS-IR-RPR-data-acquisition-and-processing)
+  - [Altimetry FFSAR processing](#4Altimetry-FFSAR-processing)
+  - [Altimetry validation](#5Altimetry-validation)
+  
+ 
 - [Data access](#data-access)
 - [Citation](#citation)
 - [License](#license)
@@ -52,15 +54,17 @@ The repository is designed to support reproducible research, open-source develop
 ---
 
 ## Repository scope
-
 This repository covers the full processing chain:
 
-1. GNSS-IR data acquisition and processing using RPR and [gnssrefl python package](https://gnssrefl.readthedocs.io/en/latest/) 
-2. Sentinel-3A/B and Sentinel-6 altimetry processing
-3. Validation of Sentinel-3A/B and Sentinel-6 inland and coastal water level
-4. Reccomendation for installing low-cost GNSS_IR sensors
-5. RPR sensor assembly and setup
-6. Field deployment conditions and installation activities at RPR sites in Cameroon
+1. RPR sensor assembly and setup
+2. Field campaign in Cameroon
+3. GNSS-IR RPR data acquisition and processing
+and [gnssrefl python package](https://gnssrefl.readthedocs.io/en/latest/) 
+5. Altimetry FFSAR processing
+6. Altimetry validation
+
+
+7. Field deployment conditions and installation activities at RPR sites in Cameroon
 
 Each component can be used independently or as part of a complete pipeline.
 
