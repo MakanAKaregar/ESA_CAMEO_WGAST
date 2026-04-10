@@ -308,4 +308,4 @@ The secondary spline can be evenly resampled by a user defined interval (e.g. 30
   <em>Figure 15. Final GNSS-IR derived water level time series after applying H-dot and inter-frequency corrections along with spline fitting (8 knots). The time series clearly shows the tidal signal, with smooth sub-daily variations captured by the spline model. A short spike is visible, likely caused by remaining outliers or data gaps.</em>
 </p>
 
-Prepared by [Makan Karegar](https://github.com/MakanAKaregar). Last updated June 30, 2023.
+Prepared by [Makan Karegar](https://github.com/MakanAKaregar). Last updated April 10, 2026.
