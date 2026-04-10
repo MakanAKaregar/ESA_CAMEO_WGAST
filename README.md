@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="/assets/EOAFRICA-logo-.png" width="200">
+  <img src="/assets/logos.png" width="500">
 </p>
 
 # CAMEO-WAGST
 **Cameroon Advanced Measurements for Enhanced Observations of Water Levels using Affordable GNSS-IR and Sentinel-3 & Sentinel-6 Technology**
 
-🔗 Project page (ESA EO AFRICA R&D Facility):  
+Project page (ESA EO AFRICA R&D Facility):  
 https://www.eoafrica-rd.org/research/research-projects-2024-2026/#proposal_8
 
 Project PIs: [Makan Karegar (University of Bonn)](https://www.igg.uni-bonn.de/apmg/de/team/staff/karegar), Loudi Yap (NIC)
@@ -69,7 +69,7 @@ Each component can be used independently or as part of a complete pipeline.
 ## Data access
 
 Water level time series from all RPR stations are openly available and updated daily at:
-🔗 [www.GNSS4SurfaceWater.com](http://www.GNSS4SurfaceWater.com)
+[www.GNSS4SurfaceWater.com](http://www.GNSS4SurfaceWater.com)
 
 Raw NMEA data are also uploaded daily to the University of Bonn cloud.
 
