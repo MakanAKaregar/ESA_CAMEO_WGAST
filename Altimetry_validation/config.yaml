@@ -1,17 +1,18 @@
 project_root: .
 
 sentinel:
-  s3: data/raw/sentinel3
-  s6: data/raw/sentinel6
+  s3: data/raw/sentinel-3
+  s6: data/raw/sentinel-6
 
 outputs:
   csv: outputs/csv
-  logs: outputs/logs
-
+  
 processing:
-  misfit_threshold: 0.1
-  search_radius_deg: 0.05
-  buffer_radius_m: 1000
+search_radius_deg = 0.12        # initial window around the station (~11 km approximately)
+buffer_radius_km = 1            # aggregation around the virtual point
+buffer_radius_m = int(buffer_radius_km * 1000)
+misfit_threshold = 6.0
+min_points_after_quality = 3
 
 weights:
   station: 0.7
