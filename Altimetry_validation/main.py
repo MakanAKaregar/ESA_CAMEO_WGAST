@@ -36,24 +36,46 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 # 0️⃣ GOOGLE DRIVE SETUP + PATHS
 # =============================================================================
 
+from google.colab import drive
+import os
+import yaml
+
 drive.mount('/content/drive', force_remount=True)
 
-project_path = "/content/drive/MyDrive/Altimetry"
-ffsar_path = os.path.join(project_path, "FFSAR_product")
+# -------------------------------------------------------------
+# Project root (ONLY place where Drive is defined)
+# -------------------------------------------------------------
+project_root_drive = "/content/drive/MyDrive/Altimetry/FFSAR_product"
 
+# -------------------------------------------------------------
+# Load configuration (GitHub-style structure)
+# -------------------------------------------------------------
+config_path = "config/config.yaml"
+
+with open(config_path, "r") as f:
+    cfg = yaml.safe_load(f)
+
+# -------------------------------------------------------------
 # Sentinel datasets
-sentinel6_path = os.path.join(ffsar_path, "Sentinel-6_part2")
+# -------------------------------------------------------------
+sentinel6_path = os.path.join(project_root_drive, "Sentinel-6_part2")
 
-# Output directory
-output_path = os.path.join(ffsar_path, "results_S6_river_part2")
+# -------------------------------------------------------------
+# Outputs
+# -------------------------------------------------------------
+output_path = os.path.join(project_root_drive, "results_S6_river_part2")
 os.makedirs(output_path, exist_ok=True)
 
-# Input datasets
-river_mask_path = os.path.join(project_path, "Sanaga_mask", "Sanaga.shp")
-stations_file = os.path.join(project_path, "RPR_stations.xls")
+# -------------------------------------------------------------
+# Auxiliary datasets
+# -------------------------------------------------------------
+river_mask_path = os.path.join(project_root_drive, "Sanaga_mask", "Sanaga.shp")
+stations_file = os.path.join(project_root_drive, "RPR_stations.xls")
 
+# -------------------------------------------------------------
 # SWORD dataset (optional slope correction)
-sword_reaches_path = os.path.join(project_path, "Sanaga_SWORD.gpkg")
+# -------------------------------------------------------------
+sword_reaches_path = os.path.join(project_root_drive, "Sanaga_SWORD.gpkg")
 
 # =============================================================================
 # 🚧 DAM LOCATION (EXCLUSION ZONE)
