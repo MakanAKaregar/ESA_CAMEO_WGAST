@@ -1,0 +1,18 @@
+project_root: .
+
+sentinel:
+  s3: data/raw/sentinel3
+  s6: data/raw/sentinel6
+
+outputs:
+  csv: outputs/csv
+  logs: outputs/logs
+
+processing:
+  misfit_threshold: 0.1
+  search_radius_deg: 0.05
+  buffer_radius_m: 1000
+
+weights:
+  station: 0.7
+  center: 0.3
