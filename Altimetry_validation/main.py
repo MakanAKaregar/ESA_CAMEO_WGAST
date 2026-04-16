@@ -78,7 +78,7 @@ stations_file = os.path.join(project_root_drive, "RPR_stations.xls")
 sword_reaches_path = os.path.join(project_root_drive, "Sanaga_SWORD.gpkg")
 
 # =============================================================================
-# 🚧 DAM LOCATION (EXCLUSION ZONE)
+# DAM LOCATION (EXCLUSION ZONE)
 # =============================================================================
 
 lat_dam = 4.078300
