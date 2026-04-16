@@ -1,19 +1,19 @@
-# 🌊 Altimetry Validation Workflow (CAMEO-WAGST)
+# Altimetry Validation Workflow (CAMEO-WAGST)
 
-## 📌 Project Overview
+## Project Overview
 
 The second line of work within the CAMEO-WAGST project focuses on deriving water levels from satellite altimetry at RPR stations in order to validate Sentinel-3 and Sentinel-6 measurements.
 
 This repository implements a complete altimetry validation workflow for processing satellite-derived water surface heights (SSH) from Sentinel-3A, Sentinel-3B, and Sentinel-6 missions.
 
-## 📡 Data Sources
+## Data Sources
 
 The satellite products are rigorously validated against independent ground-based observations:
 
 - GNSS-IR measurements from RPR stations  
 - In-situ hydrometric gauge data  
 
-## ⚙️ Workflow Description
+## Workflow Description
 
 The workflow is demonstrated using a representative RPR station and corresponding in-situ hydrometric data, serving as a reference implementation of the full processing chain.
 
@@ -24,7 +24,7 @@ It includes:
 - Robust statistical aggregation (median + MAD)  
 - Cross-validation with ground-based observations  
 
-## 🎯 Objectives
+## Objectives
 
 The main objective is to generate high-quality SSH time series over river and coastal environments, enabling:
 
@@ -32,7 +32,7 @@ The main objective is to generate high-quality SSH time series over river and co
 - Cross-validation between independent techniques  
 - Improved monitoring of hydrological dynamics  
 
-## 🌍 Scientific Impact
+## Scientific Impact
 
 This approach supports the development of robust multi-source water level monitoring systems by integrating:
 
