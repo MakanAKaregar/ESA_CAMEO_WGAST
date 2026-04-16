@@ -1,15 +1,3 @@
 ## Water level monitoring using satellite altimetry: Sentinel-3A/B & Sentinel-6 hydrological validation Workflow  
-
-Within the **CAMEO-WGAST project**, eight **Raspberry Pi Reflectors (RPRs)** were deployed in summer 2025 to provide **in-situ water level measurements** across selected riverine and coastal environments.
-This repository presents a **comprehensive altimetry validation workflow**, demonstrating how satellite-derived **water surface heights (SSH)** from:
-- Sentinel-3A / Sentinel-3B  
-- Sentinel-6  
-are processed and rigorously validated against **GNSS-IR observations (RPR)** and **in-situ hydrometric measurements**.
-
-The workflow illustrates a **use case for one RPR station**, serving as a reference example for the full processing chain. It aims to generate **high-quality SSH time series** from Sentinel missions over **river and coastal systems**, enabling:
-
-- Accurate comparison with ground-based observations  
-- Cross-validation between independent measurement techniques  
-- Improved monitoring of hydrological dynamics  
-
-This approach supports the development of **robust, multi-source water level monitoring systems**, combining satellite altimetry with **GNSS-IR and conventional gauge data** for enhanced reliability and spatial coverage.
+The second line of work within the **CAMEO-WGAST project** focuses on deriving water levels from satellite altimetry at RPR stations in order to validate measurements from the Sentinel-3 and Sentinel-6 missions. This repository implements a **comprehensive altimetry validation workflow** that processes satellite-derived **water surface heights (SSH)** from **Sentinel-3A, Sentinel-3B, and Sentinel-6**. These satellite products are rigorously evaluated against independent ground-based observations, including **GNSS-IR measurements at RPR stations and in-situ hydrometric gauge data**. The workflow is demonstrated using a representative **RPR station and corresponding in-situ hydrometric records**, serving as a reference implementation of the complete processing chain. The objective is to generate high-quality SSH time series over river and coastal environments from Sentinel missions, enabling accurate comparisons with ground observations, cross-validation between independent measurement techniques, and improved monitoring of hydrological dynamics. 
+Overall, this approach supports the development of **robust multi-source water level monitoring systems** by integrating satellite altimetry, GNSS-IR, and conventional gauge measurements, thereby enhancing both the reliability and spatial coverage of hydrological observations.
