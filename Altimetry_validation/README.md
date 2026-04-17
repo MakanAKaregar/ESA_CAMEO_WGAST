@@ -46,5 +46,6 @@ This integration improves the reliability, spatial coverage, and consistency of 
 
 The figure below shows a comparison between Sentinel-6 satellite-derived water surface heights (SSH) and in-situ river gauge measurements at the Song Mbenguè station (CAM1).
 <p align="center">
-  <img src="assets/Sentinel-6_river_gauge_data_A109.png" width="750"/>
+  <img src="../assets/Sentinel-6_river_gauge_data_A109.png" width="1200"/>
+  <br>
 </p>
