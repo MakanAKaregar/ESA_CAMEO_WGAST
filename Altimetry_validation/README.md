@@ -42,13 +42,13 @@ The river mask, provided by the National Institute of Cartography (Cameroon), is
 The workflow is demonstrated using a representative RPR station or corresponding in-situ hydrometric data, serving as a reference implementation of the full processing chain.
 
 It includes:
--Read Sentinel-3&6 altimetry data
--Select measurements around target stations
--Spatial filtering over river and coastal systems
--Extraction of SSH time series from satellite altimetry 
--Geophysical corrections and slope adjustments(for river applications)  
--Robust statistical aggregation (median + MAD)  
--Cross-validation with ground-based observations  
+- Read Sentinel-3&6 altimetry data
+- Select measurements around target stations
+- Spatial filtering over river and coastal systems
+- Extraction of SSH time series from satellite altimetry
+- Geophysical corrections and slope adjustments(for river applications)
+- Robust statistical aggregation (median + MAD)
+- Cross-validation with ground-based observations  
 
 ## Objectives
 
