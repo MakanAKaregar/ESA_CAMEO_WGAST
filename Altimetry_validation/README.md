@@ -21,7 +21,7 @@ The satellite products are rigorously validated against independent ground-based
 
 - GNSS-IR measurements from RPR stations: the processed GNSS-IR data, following the GNSS-IR processing workflow described in the RPR_processing module, are used in this study. The full processing chain is available here: [RPR_processing](https://github.com/MakanAKaregar/CAMEO_WGAST/tree/4d6a2514814fc5e725057033ca62d3d0c32899bf/RPR_processing)
 - In-situ hydrometric gauge data obtained from AES-Sonel, the Energy Corporation of Cameroon
-- water level time series from existing virtual gauges in the DAHITI database (DGFI-TUM), which are accessed and downloaded through the official portal: ('https://dahiti.dgfi.tum.de/en/map/') 
+- water level time series from existing virtual gauges in the DAHITI database (DGFI-TUM), which are accessed and downloaded through the official portal: https://dahiti.dgfi.tum.de/en/map/ 
 
 ## Workflow Description
 
