@@ -13,7 +13,7 @@ This validation workflow relies on satellite altimetry products generated using 
 - Waveform retracking using SAMOSA+  
 - Signal enhancement for inland and coastal waters  
 
-The preprocessing workflow is available here [Altimetry_FFSAR](../Altimetry_FFSAR)
+The preprocessing workflow is available here [Altimetry_FFSAR](../*Altimetry_FFSAR*)
 
 This repository uses the resulting Level-2 FFSAR products as input for validation and analysis.
 
