@@ -64,7 +64,8 @@ This approach supports the development of robust multi-source water level monito
 
 - Satellite altimetry (Sentinel missions)  
 - GNSS-IR observations  
-- Conventional hydrometric gauges  
+- Conventional hydrometric gauges
+- water level time series from the DAHITI database
 
 This integration improves the reliability, spatial coverage, and consistency of hydrological observations.
 
