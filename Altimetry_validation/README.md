@@ -28,6 +28,7 @@ The in-situ hydrometric gauge data are obtained from AES-SONEL (Energy Corporati
   <img src="../assets/Staff Gauge.jpeg" width="1200"/>
   <br>
 </p>
+
 - ### *water level time series* from existing virtual gauges in the DAHITI database (DGFI-TUM):
 These data are accessed and downloaded through the official portal: https://dahiti.dgfi.tum.de/en/map/.
 
