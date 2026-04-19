@@ -71,4 +71,4 @@ This integration improves the reliability, spatial coverage, and consistency of 
 ## Examples of altimetry validation result
 
 The figures below show the examples of the comparison between Sentinel-3 satellite-derived water surface heights (SSH) and in-situ river gauge and DAHITI measurements at the Song Mbenguè station (CAM1).
-<p align="center"> <img src="../assets/S3B_599_Dahiti_CAM1.png" width="1200"/> <br> </p> <p align="center"> <img src="../assets/S3B_599_hydro_CAM1.png" width="1200"/> <br> </p>
+<p align="center"> <img src="../assets/S3B_599_hydro_CAM1.png" width="1200"/> <br> </p> <p align="center"> <img src="../assets/S3B_599_Dahiti_CAM1.png" width="1200"/> <br> </p> 
