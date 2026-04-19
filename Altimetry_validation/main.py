@@ -18,6 +18,7 @@ Main features:
 # =============================================================================
 
 import os
+import yaml
 import glob
 import numpy as np
 import pandas as pd
@@ -32,23 +33,8 @@ import pyproj
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-# =============================================================================
-# 0️⃣ GOOGLE DRIVE SETUP + PATHS
-# =============================================================================
-
-from google.colab import drive
-import os
-import yaml
-
-drive.mount('/content/drive', force_remount=True)
-
 # -------------------------------------------------------------
-# Project root (ONLY place where Drive is defined)
-# -------------------------------------------------------------
-project_root_drive = "/content/drive/MyDrive/Altimetry/FFSAR_product"
-
-# -------------------------------------------------------------
-# Load configuration (GitHub-style structure)
+# Load configuration
 # -------------------------------------------------------------
 config_path = "config/config.yaml"
 
@@ -56,35 +42,44 @@ with open(config_path, "r") as f:
     cfg = yaml.safe_load(f)
 
 # -------------------------------------------------------------
-# Sentinel datasets
+# Project root (local or Colab-safe fallback)
 # -------------------------------------------------------------
-sentinel6_path = os.path.join(project_root_drive, "Sentinel-6_part2")
+project_root = cfg.get("project_root", ".")
 
-# -------------------------------------------------------------
-# Outputs
-# -------------------------------------------------------------
-output_path = os.path.join(project_root_drive, "results_S6_river_part2")
+# =============================================================================
+# SENTINEL DATASETS
+# =============================================================================
+
+sentinel6_path = cfg["paths"]["sentinel6"]
+sentinel3_path = cfg["paths"].get("sentinel3", None)
+
+# =============================================================================
+# OUTPUTS
+# =============================================================================
+
+output_path = cfg["paths"]["output"]
 os.makedirs(output_path, exist_ok=True)
 
-# -------------------------------------------------------------
-# Auxiliary datasets
-# -------------------------------------------------------------
-river_mask_path = os.path.join(project_root_drive, "Sanaga_mask", "Sanaga.shp")
-stations_file = os.path.join(project_root_drive, "RPR_stations.xls")
+csv_path = cfg["paths"]["csv"]
+figures_path = cfg["paths"]["figures"]
 
-# -------------------------------------------------------------
-# SWORD dataset (optional slope correction)
-# -------------------------------------------------------------
-sword_reaches_path = os.path.join(project_root_drive, "Sanaga_SWORD.gpkg")
+os.makedirs(csv_path, exist_ok=True)
+os.makedirs(figures_path, exist_ok=True)
 
 # =============================================================================
-# DAM LOCATION (EXCLUSION ZONE)
+# AUXILIARY DATASETS
+# =============================================================================
+river_mask_path = cfg["auxiliary"]["river_mask"]
+stations_file = cfg["auxiliary"]["stations"]
+sword_reaches_path = cfg["auxiliary"]["sword"]
+
+# =============================================================================
+# DAM EXCLUSION ZONE
 # =============================================================================
 
-lat_dam = 4.078300
-lon_dam = 10.464673
-dam_exclusion_m = 700  # 0.7 km exclusion radius
-
+lat_dam = cfg["dam"]["lat"]
+lon_dam = cfg["dam"]["lon"]
+dam_exclusion_m = cfg["dam"]["exclusion_radius_m"]
 # =============================================================================
 # 1️⃣ LOAD RIVER or COASTAL STATIONS (GNSS-IR OR HYDROMETRIC OR TIDE GAUGE STATION)
 # =============================================================================
