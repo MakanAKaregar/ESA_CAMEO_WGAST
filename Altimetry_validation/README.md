@@ -19,9 +19,9 @@ This repository uses the resulting Level-2 FFSAR products as input for validatio
 
 The satellite products are rigorously validated against independent ground-based observations:
 
-- *GNSS-IR measurements* from RPR stations
+- ## *GNSS-IR measurements from RPR stations*
 The processed GNSS-IR data, following the GNSS-IR processing workflow described in the RPR_processing module, are used in this study. The full processing chain is available here: [RPR_processing](https://github.com/MakanAKaregar/CAMEO_WGAST/tree/4d6a2514814fc5e725057033ca62d3d0c32899bf/RPR_processing)
-- *In-situ hydrometric gauge data* 
+- ## *In-situ hydrometric gauge data* 
 The In-situ hydrometric gauge data are abtained from AES-SONEL (Energy Corporation of Cameroon) at the CAM1 station (Song Mbenguè), based on manual staff gauge readings (limnimetric scales) performed at hourly intervals. This manual procedure limits temporal resolution and may introduce measurement uncertainties.
 
 <p align="center">
@@ -32,9 +32,9 @@ The In-situ hydrometric gauge data are abtained from AES-SONEL (Energy Corporati
 These data are accessed and downloaded through the official portal: https://dahiti.dgfi.tum.de/en/map/.
 
 Further the ground-based observations,other ancillary data are used:
-- SWORD dataset:
+- ## *SWORD dataset*
 The SWORD database is used for the river slope correction and publicly available here: https://www.swordexplorer.com/. The slope correction applied in this study follows the methodology described in: https://doi.org/10.1016/j.jhydrol.2024.132553.
-- River mask : 
+- ## *River mask* 
 The river mask, provided by the National Institute of Cartography (Cameroon), is used for spatial filtering. It allows the isolation of valid river pixels and the removal of non-water or out-of-basin observations within the Sanaga basin, ensuring that only measurements located within the hydrological domain of interest are retained.
 
 ## Workflow Description
