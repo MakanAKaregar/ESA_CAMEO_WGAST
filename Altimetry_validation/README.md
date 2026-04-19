@@ -31,7 +31,6 @@ The in-situ hydrometric gauge data are obtained from AES-SONEL (Energy Corporati
 
 - ### *water level time series* from existing virtual gauges in the DAHITI database (DGFI-TUM):
 These data are accessed and downloaded through the official portal: https://dahiti.dgfi.tum.de/en/map/.
-
 Further the ground-based observations,other ancillary data are used:
 - ### *SWORD dataset*
 The SWORD database is used for the river slope correction and publicly available here: https://www.swordexplorer.com/. The slope correction applied in this study follows the methodology described in: https://doi.org/10.1016/j.jhydrol.2024.132553.
