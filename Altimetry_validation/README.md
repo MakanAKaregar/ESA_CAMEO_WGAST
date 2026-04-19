@@ -19,8 +19,7 @@ This repository uses the resulting Level-2 FFSAR products as input for validatio
 
 The satellite products are rigorously validated against independent ground-based observations:
 
-- GNSS-IR measurements from RPR stations: the processed GNSS-IR data following the GNSS-IR processing workflows as described  here: ../CAMEO_WGAST/RPR_processing/, are used in this study
-- In-situ hydrometric gauge data. This directory contains 
+- GNSS-IR measurements from RPR stations: the processed GNSS-IR data, following the GNSS-IR processing workflow described in the RPR_processing module, are used in this study. The full processing chain is available here: [RPR_processing](https://github.com/MakanAKaregar/CAMEO_WGAST/tree/4d6a2514814fc5e725057033ca62d3d0c32899bf/RPR_processing)
 - water level time series from the DAHITI database (DGFI-TUM)('https://dahiti.dgfi.tum.de/en/map/')
 
 ## Workflow Description
