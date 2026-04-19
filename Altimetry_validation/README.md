@@ -22,7 +22,7 @@ The satellite products are rigorously validated against independent ground-based
 - ### *GNSS-IR measurements from RPR stations*
 The processed GNSS-IR data, following the GNSS-IR processing workflow described in the *RPR_processing* module, are used in this study. The full processing chain is available here: [RPR_processing](https://github.com/MakanAKaregar/CAMEO_WGAST/tree/4d6a2514814fc5e725057033ca62d3d0c32899bf/RPR_processing)
 - ### *In-situ hydrometric gauge data* 
-The In-situ hydrometric gauge data are abtained from AES-SONEL (Energy Corporation of Cameroon) at the CAM1 station (Song Mbenguè), based on manual staff gauge readings (limnimetric scales) performed at hourly intervals. This manual procedure limits temporal resolution and may introduce measurement uncertainties.
+The in-situ hydrometric gauge data are obtained from AES-SONEL (Energy Corporation of Cameroon) at the CAM1 station (Song Mbenguè). Water levels are recorded through manual staff gauge readings (limnimetric scales) performed four times per day at 07:00, 12:00, 17:00, and 22:00. This manual observation procedure may introduce measurement uncertainties due to operator-dependent reading accuracy.
 
 <p align="center">
   <img src="../assets/Staff Gauge.jpeg" width="1200"/>
