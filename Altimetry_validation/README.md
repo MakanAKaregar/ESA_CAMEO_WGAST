@@ -19,7 +19,7 @@ This repository uses the resulting Level-2 FFSAR products as input for validatio
 
 The satellite products are rigorously validated against independent ground-based observations:
 
-- GNSS-IR measurements from RPR stations: the processed GNSS-IR data, as described in the ../*RPR_processing* module, are used in this study for validation purposes. 
+- GNSS-IR measurements from RPR stations: the processed GNSS-IR data, as described in the RPR_processing module and available here: ../RPR_processing, are used in this study
 - In-situ hydrometric gauge data
 - water level time series from the DAHITI database (DGFI-TUM)('https://dahiti.dgfi.tum.de/en/map/')
 
