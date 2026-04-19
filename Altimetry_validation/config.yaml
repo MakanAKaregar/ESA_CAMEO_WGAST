@@ -1,5 +1,5 @@
 project:
-  name: Altimetry Validation Workflow
+  name: Altimetry validation workflow
 
 paths:
   sentinel6: data/raw/sentinel6
