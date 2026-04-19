@@ -8,10 +8,20 @@ This repository implements a complete altimetry validation workflow for processi
 
 ## Data Sources
 
+This validation workflow relies on satellite altimetry products generated using the Fully-Focused SAR (FFSAR) processing chain. The FFSAR preprocessing (developed in the `Altimetry_FFSAR` module) includes:
+- Omega-Kappa SAR focusing  
+- Waveform retracking using SAMOSA+  
+- Signal enhancement for inland and coastal waters  
+
+The preprocessing workflow is available here [Altimetry_FFSAR](../Altimetry_FFSAR)
+
+This repository uses the resulting Level-2 FFSAR products as input for validation and analysis.
+
 The satellite products are rigorously validated against independent ground-based observations:
 
 - GNSS-IR measurements from RPR stations  
-- In-situ hydrometric gauge data  
+- In-situ hydrometric gauge data
+- water level time series from the DAHITI database (DGFI-TUM)('https://dahiti.dgfi.tum.de/en/map/')
 
 ## Workflow Description
 
