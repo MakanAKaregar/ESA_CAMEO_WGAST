@@ -29,8 +29,13 @@ The In-situ hydrometric gauge data are abtained from AES-SONEL (Energy Corporati
   <br>
 </p>
 - water level time series from existing virtual gauges in the DAHITI database (DGFI-TUM):
-
 These data are accessed and downloaded through the official portal: https://dahiti.dgfi.tum.de/en/map/.
+
+Further the ground-based observations,other ancillary data are used:
+- SWORD dataset:
+The SWORD database is used for the river slope correction and publicly available here: https://www.swordexplorer.com/. The slope correction applied in this study follows the methodology described in: https://doi.org/10.1016/j.jhydrol.2024.132553.
+- River mask : 
+The river mask, provided by the National Institute of Cartography (Cameroon), is used for spatial filtering. It allows the isolation of valid river pixels and the removal of non-water or out-of-basin observations within the Sanaga basin, ensuring that only measurements located within the hydrological domain of interest are retained.
 
 ## Workflow Description
 
