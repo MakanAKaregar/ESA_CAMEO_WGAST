@@ -68,10 +68,7 @@ This approach supports the development of robust multi-source water level monito
 
 This integration improves the reliability, spatial coverage, and consistency of hydrological observations.
 
-## Example of Altimetry Validation Result
+## Examples of altimetry validation result
 
-The figure below shows a comparison between Sentinel-6 satellite-derived water surface heights (SSH) and in-situ river gauge measurements at the Song Mbenguè station (CAM1).
-<p align="center">
-  <img src="../assets/Sentinel-6_river_gauge_data_A109.png" width="1200"/>
-  <br>
-</p>
+The figures below show the examples of the comparison between Sentinel-3 satellite-derived water surface heights (SSH) and in-situ river gauge and DAHITI measurements at the Song Mbenguè station (CAM1).
+<p align="center"> <img src="../assets/S3B_599_Dahiti_CAM1.png" width="1200"/> <br> </p> <p align="center"> <img src="../assets/S3B_599_hydro_CAM1.png" width="1200"/> <br> </p>
