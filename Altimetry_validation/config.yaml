@@ -1,20 +1,24 @@
-project_root: .
+project:
+  name: Altimetry Validation Workflow
 
-data:
-  sentinel-6: data/raw/sentinel6
-  sentinel-3: data/raw/sentinel3
-  river_mask: data/river_mask
-  stations: data/stations
-  sword: data/sword
-outputs:
+paths:
+  sentinel6: data/raw/sentinel6
+  sentinel3: data/raw/sentinel3
+  output: outputs
   csv: outputs/csv
   figures: outputs/figures
-  
-processing:
 
-  search_radius_deg = 0.12        # initial window around the station (~11 km approximately)
-  buffer_radius_km = 1            # aggregation around the virtual point
-  buffer_radius_m = int(buffer_radius_km * 1000)
-  misfit_threshold = 6.0
-  min_points_after_quality = 3
-  weights: station: 0.7 center: 0.3
+auxiliary:
+  river_mask: data/raw/river_mask/Sanaga.shp
+  stations: data/raw/stations/RPR_stations.xls
+  sword: data/raw/sword/SWORD.gpkg
+
+processing:
+  search_radius_deg: 0.12
+  buffer_radius_km: 1
+  misfit_threshold: 6.0
+
+dam:
+  lat: 4.078300
+  lon: 10.464673
+  exclusion_radius_m: 700
