@@ -140,7 +140,7 @@ Successful GNSS-IR deployment in Cameroon demands more than technical know-how. 
 Water level time series from all RPR stations are openly available and updated daily at:
 [www.GNSS4SurfaceWater.com](http://www.GNSS4SurfaceWater.com)
 
-Raw NMEA data are also uploaded daily to the University of Bonn cloud.
+Raw NMEA data are also uploaded daily to the [University of Bonn cloud](https://uni-bonn.sciebo.de/s/Gs47oYFP3rCRwgw) (password: LbPxiyJcf3).
 
 For the full project documentation, processing workflows and Sentinel-3 & Sentinel-6 altimetry processing validation code, see the:
 [Main repository README](https://github.com/MakanAKaregar/CAMEO_WGAST)
