@@ -4,7 +4,25 @@
 
 The second line of work within the CAMEO-WAGST project focuses on deriving water levels from satellite altimetry at RPR stations in order to validate Sentinel-3 and Sentinel-6 measurements.
 
-This repository implements a complete altimetry validation workflow for processing satellite-derived water surface heights (SSH) from Sentinel-3A, Sentinel-3B, and Sentinel-6 missions.
+This repository implements a complete and reproducible altimetry validation workflow for extracting satellite-derived water surface heights (SSH) from Sentinel-3A, Sentinel-3B, and Sentinel-6 missions. It enables comparison of satellite observations with in-situ measurements and assesses the consistency and reliability of multi-source water level datasets in river and coastal environments.
+
+## Motivation
+This workflow is developed to support robust hydrological validation using modern satellite altimetry techniques.
+It builds upon advanced preprocessing methods (FFSAR) and aims to provide:
+- A reproducible validation framework
+- A simplified and transparent workflow
+- A user-friendly structure for new users
+## Technology Stack and environment
+The project is implemented in Python.
+Main libraries used:
+- numpy, pandas
+- xarray (NetCDF processing)
+- geopandas, shapely (geospatial processing)
+- pyproj
+- netcdf4
+- matplotlib (visualization)
+  
+  More information can be found [here]: 
 
 ## Data Sources
 
@@ -50,14 +68,6 @@ It includes:
 - Geophysical corrections and slope adjustments(for river applications)
 - Robust statistical aggregation (median + MAD)
 - Cross-validation with ground-based observations  
-
-## Objectives
-
-The main objective is to generate high-quality SSH time series over river and coastal environments, enabling:
-
-- Accurate comparison with in-situ measurements  
-- Cross-validation between independent techniques  
-- Improved monitoring of hydrological dynamics  
 
 ## Scientific Impact
 
