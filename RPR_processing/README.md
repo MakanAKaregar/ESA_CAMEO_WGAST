@@ -44,23 +44,16 @@ Station cam2 is located in the coastal city of Kribi, Cameroon and it has been o
 
 **Location:** Coastal city of Kribi, Cameroon
 
-**Data archive:** NMEA [zenodo]()
+**Data archive:** NMEA [University of Bonn cloud](https://uni-bonn.sciebo.de/s/Gs47oYFP3rCRwgw) and soon on zenodo.
 
 **Ellipsoidal Coordinates:** Latitude: 2.9414362, Longitude: 9.9053138, Height: 22.982  m
 
 [Google Map Link](https://maps.app.goo.gl/z1YyVsHXAmmuB3W48)
 
 ### 1. Pick up RPR data
-RPR data for period 24.06.2025 (doy 175, 2025) to ??-??-2026 (doy , 2026) are publically available from a [zenodo archive](). The data record is updated daily under [the University of Bonn's cloud]().
+RPR data for period 24.06.2025 (doy 175, 2025) to the present day are publically available from [the University of Bonn's cloud](https://uni-bonn.sciebo.de/s/Gs47oYFP3rCRwgw) (password: LbPxiyJcf3). 
 
-Download entire data using <code>wget </code>
-
-<code>wget https://zenodo.org/record/6828597/files/MakanAKaregar/RPRatWesel-NMEA.zip?download=1 </code>
-
-or you can manually download the data for a few selected days from [the University of Bonn's cloud](https://uni-bonn.sciebo.de/s/QYTywsQeHbkRC62).
- (password: LbPxiyJcf3).
- 
-Create nmea and station directory:
+After downloading the nmea data for the site cam2, create nmea and station directory:
 
 <code>mkdir -p $REFL_CODE/nmea/cam2</code>
 
