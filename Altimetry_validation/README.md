@@ -29,7 +29,7 @@ More information can be found [here](https://github.com/MakanAKaregar/CAMEO_WGAS
 The workflow is demonstrated using a representative RPR station or corresponding in-situ hydrometric data, serving as a reference implementation of the full processing chain.
 
 It includes:
-- Read Sentinel-3&6 altimetry data: The data can be found [here] (https://github.com/MakanAKaregar/CAMEO_WGAST/tree/f1545be60020810de55915a8e9969401c525e66e/Altimetry_validation/data/raw)
+- Read Sentinel-3&6 altimetry data: The data can be found [here](https://github.com/MakanAKaregar/CAMEO_WGAST/tree/f1545be60020810de55915a8e9969401c525e66e/Altimetry_validation/data/raw)
 - Select measurements around target stations
 - Spatial filtering over river and coastal systems
 - Extraction of SSH time series from satellite altimetry
