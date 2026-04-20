@@ -23,7 +23,7 @@ Project PIs: [Makan Karegar (University of Bonn)](https://www.igg.uni-bonn.de/ap
   - [Altimetry FFSAR processing](#4-altimetry-ffsar-processing)
   - [Altimetry validation](#5-altimetry-validation)
 - [Data access](#data-access)
-- [Citation](#citation)
+- [Citation](#citation and publication)
 - [License](#license)
 - [Contact](#contact)
 
