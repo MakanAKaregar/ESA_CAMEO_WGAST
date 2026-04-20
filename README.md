@@ -71,7 +71,7 @@ Each component can be used independently or as part of a complete pipeline.
 Water level time series from all RPR stations are openly available and updated daily at:
 [www.GNSS4SurfaceWater.com](http://www.GNSS4SurfaceWater.com)
 
-Raw NMEA data are also uploaded daily to the University of Bonn cloud.
+Raw NMEA data are also uploaded daily to the [University of Bonn cloud](https://uni-bonn.sciebo.de/s/Gs47oYFP3rCRwgw) (password: LbPxiyJcf3).
 
 ---
 
