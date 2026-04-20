@@ -4,7 +4,7 @@
 
 The second line of work within the CAMEO-WAGST project focuses on deriving water levels from satellite altimetry at RPR stations in order to validate Sentinel-3 and Sentinel-6 measurements.
 
-This repository implements a complete and reproducible altimetry validation workflow for extracting satellite-derived water surface heights (SSH) from Sentinel-3A, Sentinel-3B, and Sentinel-6 missions. It enables comparison of satellite observations with in-situ measurements and assesses the consistency and reliability of multi-source water level datasets in river and coastal environments.
+This repository provides a reproducible workflow for extracting water surface heights from Sentinel-3A, Sentinel-3B and Sentinel-6, and comparing them against in-situ measurements to assess how well the satellites perform over rivers and coastal areas in Cameroon.
 
 ## Motivation
 This workflow is developed to support robust hydrological validation using modern satellite altimetry techniques.
