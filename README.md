@@ -95,5 +95,4 @@ This project follows an open-source philosophy and is licensed under the GNU Gen
 - National Institute of Cartography (Cameroon): Loudi Yap (loudiyap@yahoo.fr)
 #### Collaborators:
 - University of Bonn (Germany): Jiaming Chen, Jürgen Kusche
-- National Institute of Cartography (Cameroon): Chrétien Ngouanet,Paul Gautier Kamto, Eloundou Essama
- Ludovic Houetchak Kandé, Abdou Nasser Ngouh and Joseph Kamguia 
+- National Institute of Cartography (Cameroon): Paul Gautier Kamto, Chrétien Ngouanet, Eloundou Essama, Ludovic Houetchak Kandé, Abdou Nasser Ngouh, Joseph Kamguia 
