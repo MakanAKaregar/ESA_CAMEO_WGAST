@@ -62,6 +62,8 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
 | CAM7 | Edea Dam, Sanaga River | 3.81896 | 10.13237 | 52.547 | River, hydropower dam | 2025-05-07 | ✅ | |
 | CAM8 | Limbe coast | 4.00868 | 9.12179 | 30.517 | Coastal, volcanic shoreline | 2025-05-31 | ⚠️ | Last data 2025-08-27; RPR under troubleshooting due to remote data access issues |
 
+**Table 1.** Overview of the eight RPR stations deployed in Cameroon as part of the CAMEO-WAGST project. Ellipsoidal heights refer to the WGS84 datum. ✅ = currently active, ⚠️ = operational but with data access issues, ❌ = inactive.
+
 # Field campaign in Cameroon
 
 ### Site CAM1 is near a planned major hydropower dam ~ 72 km upstream along the Sanaga River around Song Mbenguè village.
