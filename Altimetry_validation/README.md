@@ -22,7 +22,20 @@ Main libraries used:
 - netcdf4
 - matplotlib (visualization)
   
-  More information can be found [here](https://github.com/MakanAKaregar/CAMEO_WGAST/blob/7f3d807ee1ceb69b2dbdc17769537746defdaf81/Altimetry_validation/requirements.txt)
+More information can be found [here](https://github.com/MakanAKaregar/CAMEO_WGAST/blob/7f3d807ee1ceb69b2dbdc17769537746defdaf81/Altimetry_validation/requirements.txt)
+
+## Workflow Description
+
+The workflow is demonstrated using a representative RPR station or corresponding in-situ hydrometric data, serving as a reference implementation of the full processing chain.
+
+It includes:
+- Read Sentinel-3&6 altimetry data
+- Select measurements around target stations
+- Spatial filtering over river and coastal systems
+- Extraction of SSH time series from satellite altimetry
+- Geophysical corrections and slope adjustments(for river applications)
+- Robust statistical aggregation (median + MAD)
+- Cross-validation with ground-based observations  
 
 ## Data Sources
 
@@ -55,19 +68,6 @@ Further the ground-based observations,other ancillary data are used:
 The SWORD database is used for the river slope correction and publicly available here: https://www.swordexplorer.com/. The slope correction applied in this study follows the methodology described in: https://doi.org/10.1016/j.jhydrol.2024.132553.
 - ### *River mask* 
 The river mask, provided by the National Institute of Cartography (Cameroon), is used for spatial filtering. It allows the isolation of valid river pixels and the removal of non-water or out-of-basin observations within the Sanaga basin, ensuring that only measurements located within the hydrological domain of interest are retained.
-
-## Workflow Description
-
-The workflow is demonstrated using a representative RPR station or corresponding in-situ hydrometric data, serving as a reference implementation of the full processing chain.
-
-It includes:
-- Read Sentinel-3&6 altimetry data
-- Select measurements around target stations
-- Spatial filtering over river and coastal systems
-- Extraction of SSH time series from satellite altimetry
-- Geophysical corrections and slope adjustments(for river applications)
-- Robust statistical aggregation (median + MAD)
-- Cross-validation with ground-based observations  
 
 ## Scientific Impact
 
