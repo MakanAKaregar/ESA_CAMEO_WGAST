@@ -1,1 +1,5 @@
-
+Water level time series from virtual stations.
+- Format: Water level time series can be download in ASCII, NetCDF, CSV and JSON format.
+- Content: Time series of water level derived from multi-mission altimetry
+- Source: DAHITI database (DGFI-TUM)
+- Access here: https://dahiti.dgfi.tum.de/en/map/ 
