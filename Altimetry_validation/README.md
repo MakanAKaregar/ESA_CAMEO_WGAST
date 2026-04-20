@@ -22,7 +22,7 @@ Main libraries used:
 - netcdf4
 - matplotlib (visualization)
   
-  More information can be found [here]: https://github.com/MakanAKaregar/CAMEO_WGAST/blob/7f3d807ee1ceb69b2dbdc17769537746defdaf81/Altimetry_validation/requirements.txt
+  More information can be found [here](https://github.com/MakanAKaregar/CAMEO_WGAST/blob/7f3d807ee1ceb69b2dbdc17769537746defdaf81/Altimetry_validation/requirements.txt)
 
 ## Data Sources
 
