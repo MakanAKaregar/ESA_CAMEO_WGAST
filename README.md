@@ -75,11 +75,17 @@ Raw NMEA data are also uploaded daily to the [University of Bonn cloud](https://
 
 ---
 
-## Citation
+## Citation and publication
 
 If you use this repository or derived products, please cite:
 
-> Establishing Africa's first GNSS-IR network for coastal and river water level monitoring and satellite altimetry validation (WRR)
+Karegar, M. A., Yap, L., Chen, J., Kusche, J., Ngouh, A., Ngouanet, C., Kandé, L., & Kamguia, J. (2025). GNSS-IR monitoring of coastal and river water
+levels in Cameroon for Sentinel and SWOT altimetry validation. SWOT Science Meeting, 14–17 October, Arcachon, France. [DOI: 10.24400/527896/a03-2025.4240](https://swotst.aviso.altimetry.fr/programs/abstracts-details?tx_ausyclsseminar_pi2[action]=show&tx_ausyclsseminar_pi2[controller]=Abstracte&tx_ausyclsseminar_pi2[objAbstracte]=4240&cHash=X)
+
+Karegar, M. A., Yap, L., Chen, J., Kusche, J., Ngouh, A., Ngouanet, C., Kandé, L., & Kamguia, J. (2025) GNSS-IR monitoring of coastal and river water levels in
+Cameroon for Sentinel and SWOT Altimetry validation. [AGU Fall Meeting Abstracts, 2025](https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1866086).
+
+Establishing Africa's first GNSS-IR network for coastal and river water level monitoring and satellite altimetry validation: pre-print will be avaiable soon.
 
 ---
 
