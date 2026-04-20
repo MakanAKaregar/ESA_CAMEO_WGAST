@@ -49,6 +49,19 @@ CAM4 (Wouri estuary), CAM5 (Campo-Ntem) estuary, CAM2 (near the coastal city of 
   <em>Figure 1. Location of the eight RPR stations along the Cameroonian coast and the Sanaga River in the Gulf of Guinea. The red, yellow and black lines indicate the ground tracks of Sentinel-6, Sentinel-3, and SWOT, respectively.</em>
 </p>
 
+## Station coordinates
+
+| Station | Location | Latitude (°) | Longitude (°) | Height (m) | Environment | Data start | Active | Remarks |
+|---------|----------|-------------|--------------|-----------|-------------|------------|--------|---------|
+| CAM1 | Sanaga River, Song Mbenguè | 4.04801 | 10.56893 | 222.985 | River, upstream of planned dam | 2025-05-29 | ✅ | Two data gaps observed |
+| CAM2 | Kribi coast | 2.94144 | 9.90531 | 22.982 | Coastal, mouth of Kineke River | 2025-06-24 | ✅ | |
+| CAM3 | Cap Cameroun | 3.91661 | 9.49612 | 26.144 | Coastal, high erosion site | 2025-06-26 | ❌ | Gappy record; no data after 2025-08-23 due to antenna failure |
+| CAM4 | Wouri estuary, Douala | 4.03296 | 9.66629 | 22.937 | Estuarine | 2025-06-01 | ✅ | |
+| CAM5 | Campo (Ntem) estuary | 2.35349 | 9.82264 | 25.822 | Estuarine, narrow river | 2025-09-02 | ✅ | Data through 2026-04-13; remote site with difficult access |
+| CAM6 | Port of Kribi | 2.72408 | 9.85786 | 31.171 | Port, commercial harbour | 2025-06-25 | ⚠️ | Last data 2025-11-08; RPR under troubleshooting due to remote data access issues |
+| CAM7 | Edea Dam, Sanaga River | 3.81896 | 10.13237 | 52.547 | River, hydropower dam | 2025-05-07 | ✅ | |
+| CAM8 | Limbe coast | 4.00868 | 9.12179 | 30.517 | Coastal, volcanic shoreline | 2025-05-31 | ⚠️ | Last data 2025-08-27; RPR under troubleshooting due to remote data access issues |
+
 # Field campaign in Cameroon
 
 ### Site CAM1 is near a planned major hydropower dam ~ 72 km upstream along the Sanaga River around Song Mbenguè village.
