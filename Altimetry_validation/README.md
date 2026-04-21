@@ -47,10 +47,8 @@ Place all required datasets inside [data](data/raw/) directory. The required dat
 Execute the main processing script by running the [main](main.py) file. 
 ### 5. Outputs
 All results are automatically generated and saved after running the workflow.
-- **Time series outputs (CSV format):**  
-  Stored in [outputs](outputs/csv/)
-- **Figures and validation plots:**  
-  Stored in [outputs](outputs/figures/)
+- **Time series outputs (CSV format):** stored in [outputs](outputs/csv/)
+- **Figures and validation plots:** stored in [outputs](outputs/figures/)
 
 ## Data Sources
 
