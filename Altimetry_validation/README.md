@@ -44,7 +44,7 @@ Modify the necessary parameters and settings in the [config](config/config.yaml)
 ### 3. Prepare input data
 Place all required datasets inside [data](data/raw/) directory. The required datasets are described in the *Data Sources* section. Detailed descriptions and access links for each dataset are provided inside the data/raw/ [subfolders](data/raw/).
 ### 4. Run the Workflow
-Execute the main processing script by running the [mainValidate](main.py) file. 
+Execute the main processing script by running the [main](main.py) file. 
 ### 5. Outputs
 All results are automatically generated and saved after running the workflow.
 - **Time series outputs (CSV format):**  
