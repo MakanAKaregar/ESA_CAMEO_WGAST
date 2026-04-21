@@ -13,8 +13,7 @@ It builds upon advanced preprocessing methods (FFSAR) and aims to provide:
 - A simplified and transparent workflow
 - A user-friendly structure for new users
 ## Technology Stack and environment
-The project is implemented in Python.
-Main libraries used:
+The project is implemented in Python and relies on the following main libraries:
 - numpy, pandas
 - xarray (NetCDF processing)
 - geopandas, shapely (geospatial processing)
@@ -22,7 +21,7 @@ Main libraries used:
 - netcdf4
 - matplotlib (visualization)
   
-More information can be found [here](https://github.com/MakanAKaregar/CAMEO_WGAST/blob/7f3d807ee1ceb69b2dbdc17769537746defdaf81/Altimetry_validation/requirements.txt)
+A complete list of dependencies is available [here](https://github.com/MakanAKaregar/CAMEO_WGAST/blob/7f3d807ee1ceb69b2dbdc17769537746defdaf81/Altimetry_validation/requirements.txt)
 
 ## Workflow Description
 
