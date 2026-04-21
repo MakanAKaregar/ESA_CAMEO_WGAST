@@ -28,13 +28,14 @@ A complete list of dependencies is available [here](https://github.com/MakanAKar
 The workflow is demonstrated using a representative RPR station or corresponding in-situ hydrometric data, serving as a reference implementation of the full processing chain.
 
 It includes:
-- Read Sentinel-3&6 altimetry data: The data can be found [here](https://github.com/MakanAKaregar/CAMEO_WGAST/tree/f1545be60020810de55915a8e9969401c525e66e/Altimetry_validation/data/raw)
+- Read Sentinel-3&6 altimetry data (FFSAR Level-2 products in NetCDF) 
 - Select measurements around target stations
 - Spatial filtering over river and coastal systems
 - Extraction of SSH time series from satellite altimetry
 - Geophysical corrections and slope adjustments(for river applications)
 - Robust statistical aggregation (median + MAD)
-- Cross-validation with ground-based observations  
+- Cross-validation with ground-based observations
+   
 ## Getting Started
 Follow these steps to run the altimetry validation workflow.
 ### 1. Installation and set up
