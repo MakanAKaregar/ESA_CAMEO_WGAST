@@ -42,7 +42,15 @@ Clone the repository to your local machine and set up a virtual environment for 
 ### 2. Configuration
 Modify the necessary parameters and settings in the [config](config/config.yaml) file to tailor the project to your requirements.
 ### 3. Prepare input data
-Place all required datasets inside [data](data/raw/). Required datasets are described in the following section *Data Sources*. Detailed descriptions and access links for each dataset are provided inside the data/raw/ [subfolders](data/raw/).
+Place all required datasets inside [data](data/raw/) directory. The required datasets are described in the *Data Sources* section. Detailed descriptions and access links for each dataset are provided inside the data/raw/ [subfolders](data/raw/).
+### 4. Run the Workflow
+Execute the main processing script by running the [mainValidate](main.py) file. 
+### 5. Outputs
+All results are automatically generated and saved after running the workflow.
+- **Time series outputs (CSV format):**  
+  Stored in [outputs](outputs/csv/)
+- **Figures and validation plots:**  
+  Stored in [outputs](outputs/figures/)
 
 ## Data Sources
 
