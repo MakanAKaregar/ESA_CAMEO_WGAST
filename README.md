@@ -10,6 +10,9 @@ https://www.eoafrica-rd.org/research/research-projects-2024-2026/#proposal_8
 
 Project PIs: [Makan Karegar (University of Bonn)](https://www.igg.uni-bonn.de/apmg/de/team/staff/karegar), Loudi Yap (NIC)
 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19677901.svg)](https://doi.org/10.5281/zenodo.19677901)
+
 ---
 
 ## Contents
