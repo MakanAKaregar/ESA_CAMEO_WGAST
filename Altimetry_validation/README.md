@@ -42,7 +42,7 @@ Clone the repository to your local machine and set up a virtual environment for 
 ### 2. Configuration
 Modify the necessary parameters and settings in the [config](config/config.yaml) file to tailor the project to your requirements.
 ### 3. Prepare input data
-Place all required datasets inside [data](data/raw/).Required datasets are described in the following section *Data Sources*
+Place all required datasets inside [data](data/raw/). Required datasets are described in the following section *Data Sources*. Detailed descriptions and access links for each dataset are provided inside the data/raw/ [subfolders](data/raw/).
 
 ## Data Sources
 
