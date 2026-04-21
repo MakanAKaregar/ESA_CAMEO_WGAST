@@ -43,7 +43,7 @@ Clone the repository to your local machine and set up a virtual environment for 
 ### 2. Configuration
 Modify the necessary parameters and settings in the [config](https://github.com/MakanAKaregar/ESA_CAMEO_WGAST/blob/f2352ec3e37e6d19223f1cc4630c727b12ee0bd8/Altimetry_validation/config.yaml) file to tailor the project to your requirements.
 ### 3. Prepare input data
-Place all required datasets inside [data](https://github.com/MakanAKaregar/ESA_CAMEO_WGAST/tree/f2352ec3e37e6d19223f1cc4630c727b12ee0bd8/Altimetry_validation/data/raw) directory. The required datasets are described in the *Data Sources* section. Detailed descriptions and access links for each dataset are provided inside the [subfolders](https://github.com/MakanAKaregar/ESA_CAMEO_WGAST/tree/f2352ec3e37e6d19223f1cc4630c727b12ee0bd8/Altimetry_validation/data/raw).
+Place all required datasets inside [data](https://github.com/MakanAKaregar/ESA_CAMEO_WGAST/tree/f2352ec3e37e6d19223f1cc4630c727b12ee0bd8/Altimetry_validation/data) directory. The required datasets are described in the *Data Sources* section. Detailed descriptions and access links for each dataset are provided inside [subfolders](https://github.com/MakanAKaregar/ESA_CAMEO_WGAST/tree/f2352ec3e37e6d19223f1cc4630c727b12ee0bd8/Altimetry_validation/data/raw).
 ### 4. Run the Workflow
 Execute the main processing script by running the [main](main.py) file. 
 ### 5. Outputs
