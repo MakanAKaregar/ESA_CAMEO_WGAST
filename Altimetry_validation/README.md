@@ -48,7 +48,7 @@ Execute the main processing script by running the [main](main.py) file.
 ### 5. Outputs
 All results are automatically generated and saved after running the workflow.
 - **Time series outputs (CSV format):** stored in [outputs](https://github.com/MakanAKaregar/ESA_CAMEO_WGAST/blob/b9eb99e35cddba43283fc5b674c4d8242d0848b3/Altimetry_validation/outputs/csv)
-- **Figures and validation plots:** stored in [outputs](outputs/figures/)
+- **Figures and validation plots:** stored in [outputs](https://github.com/MakanAKaregar/ESA_CAMEO_WGAST/blob/b9eb99e35cddba43283fc5b674c4d8242d0848b3/Altimetry_validation/outputs/Figures) 
 
 ## Data Sources
 
