@@ -82,13 +82,15 @@ Raw NMEA data are also uploaded daily to the [University of Bonn cloud](https://
 
 If you use this repository or derived products, please cite:
 
-Karegar, M., Yap, L., Chen, J., Kusche, J., Ngouh, A., Ngouanet, C., Kandé, L., & Kamguia, J. (2026). *CAMEO-WAGST: GNSS-IR and Satellite Altimetry Workflow for Cameroon* (v1.0.0). Zenodo. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19677901.svg)](https://doi.org/10.5281/zenodo.19677901)
+Karegar, M., Yap, L., Chen, J., Kusche, J., Ngouh, A., Ngouanet, C., Kandé, L., & Kamguia, J. (2026). CAMEO-WAGST: GNSS-IR and Satellite Altimetry Workflow for Cameroon (v1.0.0). Zenodo. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19677901.svg)](https://doi.org/10.5281/zenodo.19677901)
 
 Karegar, M., Yap, L., Chen, J., Kusche, J., Ngouh, A., Ngouanet, C., Kandé, L., & Kamguia, J. (2025). GNSS-IR monitoring of coastal and river water
 levels in Cameroon for Sentinel and SWOT altimetry validation. SWOT Science Meeting, 14–17 October, Arcachon, France. [DOI: 10.24400/527896/a03-2025.4240](https://swotst.aviso.altimetry.fr/programs/abstracts-details?tx_ausyclsseminar_pi2[action]=show&tx_ausyclsseminar_pi2[controller]=Abstracte&tx_ausyclsseminar_pi2[objAbstracte]=4240&cHash=X)
 
 Karegar, M., Yap, L., Chen, J., Kusche, J., Ngouh, A., Ngouanet, C., Kandé, L., & Kamguia, J. (2025) GNSS-IR monitoring of coastal and river water levels in
 Cameroon for Sentinel and SWOT Altimetry validation. [AGU Fall Meeting Abstracts, 2025](https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1866086).
+
+Yap, L., Karegar, M., Kusche, J., Ngouh, A., Chen, J., Ngouanet, C., Kandé, L., & Kamguia, J. (2025). CAMEO-WAGST: Cameroon Advanced Measurements for Enhanced Observations of Water Levels using Affordable GNSS-IR and Sentinel-3 & -6 Technology. [Living Planet Symposium 2025, Vienna, Austria.](https://lps25.esa.int/lps25-presentations/presentations/1777/_1777.pdf)
 
 Establishing Africa's first GNSS-IR network for coastal and river water level monitoring and satellite altimetry validation: pre-print will be avaiable soon.
 
