@@ -6,12 +6,12 @@
 **Cameroon Advanced Measurements for Enhanced Observations of Water Levels using Affordable GNSS-IR and Sentinel-3 & Sentinel-6 Technology**
 
 Project page (ESA EO AFRICA R&D Facility):  
-https://www.eoafrica-rd.org/research/research-projects-2024-2026/#proposal_8
+[https://www.eoafrica-rd.org/research/research-projects-2024-2026/#proposal_8](https://sentinel3-st3tart.noveltis.fr/)
 
-Project PIs: [Makan Karegar (University of Bonn)](https://www.igg.uni-bonn.de/apmg/de/team/staff/karegar), Loudi Yap (NIC)
+Project PIs: [Makan Karegar (University of Bonn)](https://www.igg.uni-bonn.de/apmg/de/team/staff/karegar)
+Project teams: 
+University of Bonn
 
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19677901.svg)](https://doi.org/10.5281/zenodo.19677901)
 
 ---
 
@@ -21,10 +21,14 @@ Project PIs: [Makan Karegar (University of Bonn)](https://www.igg.uni-bonn.de/ap
 - [Key objectives](#key-objectives-of-the-cameo-wagst-project)
 - [Repository scope](#repository-scope)
   - [RPR sensor assembly and setup](#1-rpr-sensor-assembly-and-setup)
-  - [Field campaign in Cameroon](#2-field-campaign-in-cameroon)
+  - [Field campaign in Australia](#2-field-campaign-in-Burkina Faso)
+  - [Field campaign in Burkino Faso](#2-field-campaign-in-Burkina Faso)
+  - [Field campaign in Cameroon](#2-field-campaign-in-Burkina Faso)
+  - [Field campaign in Ghana](#2-field-campaign-in-Burkina Faso)
+  - [Field campaign in Nigeria](#2-field-campaign-in-Burkina Faso)
+  - [Field campaign in Senegal](#2-field-campaign-in-Burkina Faso)
+  - [Field campaign in the Philippines](#2-field-campaign-in-Burkina Faso)
   - [GNSS-IR RPR data acquisition & processing](#3-gnss-ir-rpr-data-acquisition-and-processing)
-  - [Altimetry FFSAR processing](#4-altimetry-ffsar-processing)
-  - [Altimetry validation](#5-altimetry-validation)
 - [Data access](#data-access)
 - [Citation](#citation-and-publication)
 - [License](#license)
